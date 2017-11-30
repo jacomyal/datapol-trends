@@ -1,0 +1,24 @@
+{
+  "name": "technophile",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "author": "Alexis Jacomy",
+  "license": "MIT",
+  "scripts": {
+    "start": "kotatsu serve src/index.js  --presets stage-2,react,react-hmre --index ./index.html",
+    "build": "kotatsu build client src/index.js --minify --es2015 --no-source-maps  --presets stage-2,react,react-hmre --index ./index.html --output build/bundle.js"
+  },
+  "devDependencies": {
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-react-hmre": "^1.1.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "kotatsu": "^0.15.2"
+  },
+  "dependencies": {
+    "baobab": "^2.5.0",
+    "baobab-react": "^3.0.0",
+    "lodash": "^4.17.4",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  }
+}
