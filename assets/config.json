@@ -20,56 +20,67 @@
     {
       "id": "macron",
       "label": "Emmanuel Macron",
+      "avatar": "assets/img/candidats/macron.jpg",
       "color": "#007bc7"
     },
     {
       "id": "le pen",
       "label": "Marine Le Pen",
+      "avatar": "assets/img/candidats/lepen.jpg",
       "color": "#ff5e32"
     },
     {
       "id": "fillon",
       "label": "François Fillon",
+      "avatar": "assets/img/candidats/fillon.jpg",
       "color": "#ad81ff"
     },
     {
       "id": "mélenchon",
       "label": "Jean-Luc Mélenchon",
+      "avatar": "assets/img/candidats/melenchon.jpg",
       "color": "#8b9100"
     },
     {
       "id": "hamon",
       "label": "Benoît Hamon",
+      "avatar": "assets/img/candidats/hamon.jpg",
       "color": "#86007b"
     },
     {
       "id": "dupont-aignan",
       "label": "Nicolas Dupont-Aignan",
+      "avatar": "assets/img/candidats/dupont-aignan.jpg",
       "color": "#bcaa60"
     },
     {
       "id": "lassalle",
       "label": "Jean Lassalle",
+      "avatar": "assets/img/candidats/lassalle.jpg",
       "color": "#ff5dc2"
     },
     {
       "id": "poutou",
       "label": "Philippe Poutou",
+      "avatar": "assets/img/candidats/poutou.jpg",
       "color": "#3c3174"
     },
     {
       "id": "asselineau",
       "label": "François Asselineau",
+      "avatar": "assets/img/candidats/asselineau.jpg",
       "color": "#ee8eae"
     },
     {
       "id": "arthaud",
       "label": "Nathalie Arthaud",
+      "avatar": "assets/img/candidats/arthaud.jpg",
       "color": "#77073e"
     },
     {
       "id": "cheminade",
       "label": "Jacques Cheminade",
+      "avatar": "assets/img/candidats/cheminade.jpg",
       "color": "#b3a0ea"
     }
   ]

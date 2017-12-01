@@ -40,9 +40,7 @@ export default branch(
                           width="25"
                           height="25"
                           alt={ candidate.label }
-                          src={
-                            'assets/img/candidats/' + candidate.id + '.jpg'
-                          }
+                          src={ candidate.avatar }
                         />
                         <span
                           className="badge"
