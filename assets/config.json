@@ -86,5 +86,691 @@
       "avatar": "assets/img/candidats/cheminade.jpg",
       "color": "#b3a0ea"
     }
-  ]
+  ],
+  "topics": [
+    {
+      "id": "candidat",
+      "label": "Candidat"
+    },
+    {
+      "id": "comparaison candidats",
+      "label": "Comparaison candidats"
+    },
+    {
+      "id": "document candidat",
+      "label": "Document candidat"
+    },
+    {
+      "id": "sondage",
+      "label": "Sondage"
+    },
+    {
+      "id": "intervention media",
+      "label": "Intervention media"
+    },
+    {
+      "id": "meeting",
+      "label": "Meeting"
+    },
+    {
+      "id": "corps & intimité",
+      "label": "Corps & intimité"
+    },
+    {
+      "id": "scandale & justice",
+      "label": "Scandale & justice"
+    },
+    {
+      "id": "incident de campagne",
+      "label": "Incident de campagne"
+    },
+    {
+      "id": "positionnement & coup",
+      "label": "Positionnement & coup"
+    }
+  ],
+  "events": [
+    {
+      "id": "1",
+      "label": "Ambition intime. Karine Le Marchand reçoit Juppé Bayrou Fillon Mélenchon",
+      "date": "2016-11-06",
+      "originalQueries": "mélenchon karine le marchand, fillon karine le marchand, ambition intime, ambition intime mélenchon"
+    },
+    {
+      "id": "2",
+      "label": "Marine Le Pen change le logo du FN (elle choisit la rose bleue)",
+      "date": "2016-11-16",
+      "originalQueries": "marine le pen logo, rose bleue"
+    },
+    {
+      "id": "3",
+      "label": "Annonce de la candidature de Macron à Bobigny",
+      "date": "2016-11-16",
+      "originalQueries": "Macron candidature, Emmanuel Macron président, macron bobigny annonce candidature"
+    },
+    {
+      "id": "4",
+      "label": "Dernier débat de la primaire de la droite, Fillon remonte dans les sondages",
+      "date": "2016-11-17",
+      "originalQueries": "débat primaire de la droite, débat primaire droite, primaire de la droite"
+    },
+    {
+      "id": "5",
+      "label": "Fillon précise son programme économique lors du débat : Coupes budgétaires Collectivités Territoriales et sécurité sociale Fillon",
+      "date": "2016-11-17",
+      "originalQueries": "fillon économie collectivités territoriales"
+    },
+    {
+      "id": "6",
+      "label": "Sortie du livre de Macron \"Révolution",
+      "date": "2016-11-24",
+      "originalQueries": "macron livre, macron révolution"
+    },
+    {
+      "id": "7",
+      "label": "Deuxième tour de la primaire de la droite : Fillon candidat des Républicains",
+      "date": "2016-11-27",
+      "originalQueries": "primaire de la droite fillon, comment voter à la primire de la droite, débat primaire de la droite, victoire fillon"
+    },
+    {
+      "id": "8",
+      "label": "Hollande renonce à la présidentielle",
+      "date": "2016-12-01",
+      "originalQueries": "hollande ne sera pas candidat, hollande pas candidat"
+    },
+    {
+      "id": "9",
+      "label": "Emission Politique : Benoît Hamon (primaire)",
+      "date": "2016-12-08",
+      "originalQueries": "emission politique hamon"
+    },
+    {
+      "id": "10",
+      "label": "Marine Le Pen propose la fin de la gratuité de l'éducation pour les enfants étrangers",
+      "date": "2016-12-08",
+      "originalQueries": "marine lepen enfant etranger, marine le pen éducation enfants étrangers"
+    },
+    {
+      "id": "11",
+      "label": "Macron annonce qu'il veut supprimer les cotisations chômage et maladie",
+      "date": "2016-12-09",
+      "originalQueries": "macro cotisation chômage, macron cotisations maladie, macron programme, macron bourdin, macron programme économique"
+    },
+    {
+      "id": "12",
+      "label": "Meeting de Macron à Paris (il aborde la question du travail)",
+      "date": "2016-12-10",
+      "originalQueries": "meeting emmanuel macron paris, travail, emmanuel macron, entreprise, candidat du travail, chômage"
+    },
+    {
+      "id": "13",
+      "label": "Meeting de Macron à Paris \"c'est notre prooojeeeeeet",
+      "date": "2016-12-10",
+      "originalQueries": "macron c'est notre projet, macron projet, macron video projet, macron dragon ball z, macron dbz, macron meeting bercy, macron bercy"
+    },
+    {
+      "id": "14",
+      "label": "Ségolène Royal n'exclue pas de soutenir Macron",
+      "date": "2016-12-12",
+      "originalQueries": "ségolène royal emmanuel macron"
+    },
+    {
+      "id": "15",
+      "label": "Ouverture d'une instruction judiciaire dans le cadre de l'affaire des assistants parlementaires du FN",
+      "date": "2016-12-15",
+      "originalQueries": "FN assistants parlementaires"
+    },
+    {
+      "id": "16",
+      "label": "Macron désigné personnalité politique de 2016 selon un sondage Elabe",
+      "date": "2016-12-21",
+      "originalQueries": "sondage macron personnalité de l'année, personnalité politique 2016, emmanuel macron"
+    },
+    {
+      "id": "17",
+      "label": "Emission politique Manuel Valls (primaire)",
+      "date": "2017-01-05",
+      "originalQueries": "émission politique Valls"
+    },
+    {
+      "id": "18",
+      "label": "Marine Le Pen se rend à la Trump Tower",
+      "date": "2017-01-12",
+      "originalQueries": "marine le pen trump, marine le pen trump tower"
+    },
+    {
+      "id": "19",
+      "label": "Valls se fait gifler en Bretagne",
+      "date": "2017-01-17",
+      "originalQueries": "manuel valls, manuel valls gifle, gifle de valls"
+    },
+    {
+      "id": "20",
+      "label": "Dernier débat primaire de gauche",
+      "date": "2017-01-19",
+      "originalQueries": "débat primaire gauche replay, debat primaire gauche direct, debat primaire gauche"
+    },
+    {
+      "id": "21",
+      "label": "Hamon précise sa position sur le revenu universel lors du débat pour la primaire",
+      "date": "2017-01-19",
+      "originalQueries": "simulateur revenu universel hamon, financement revenu universel hamon, revenu universel simulation"
+    },
+    {
+      "id": "22",
+      "label": "Line Renaud soutient Macron",
+      "date": "2017-01-20",
+      "originalQueries": "line renaud soutient macron"
+    },
+    {
+      "id": "23",
+      "label": "Un article révèle que Macron aurait utilisé de l'argent public pour le lancement de son mouvement alors qu'il était encore ministre de l'économie",
+      "date": "2017-01-24",
+      "originalQueries": "financement campagne macron"
+    },
+    {
+      "id": "24",
+      "label": "Débat entre Valls et Hamon sur France 2 pour la primaire",
+      "date": "2017-01-25",
+      "originalQueries": "debat valls hamon"
+    },
+    {
+      "id": "25",
+      "label": "Snowden soutient Hamon sur Twitter après le débat pour la primaire",
+      "date": "2017-01-25",
+      "originalQueries": "snowden hamon"
+    },
+    {
+      "id": "26",
+      "label": "Le canard enchaîné publie une première série d'articles sur ce qui deviendra \"l'affaire Fillon",
+      "date": "2017-01-25",
+      "originalQueries": "affaire fillon, affaire penelope fillon, penelope fillon, fillon affaire penelope"
+    },
+    {
+      "id": "27",
+      "label": "Résultat primaire de la gauche : Hamon candidat du PS",
+      "date": "2017-01-29",
+      "originalQueries": "benoit hamon, candidat présidentielle 2017"
+    },
+    {
+      "id": "28",
+      "label": "Début du contrôle du CSA sur temps de parole de chacun des candidats (plusieurs des petits candidats remettent en cause les méthode de calcul du CSA)",
+      "date": "2017-02-01",
+      "originalQueries": "CSA temps de parole, temps de parole candidats"
+    },
+    {
+      "id": "29",
+      "label": "Emission envoyé spécial : diffusion de l'interview de pénélope fillon",
+      "date": "2017-02-03",
+      "originalQueries": "envoyé spécial, pénélope fillon, elise lucet, affaire fillon"
+    },
+    {
+      "id": "30",
+      "label": "Discours Marine Le Pen à Lyon",
+      "date": "2017-02-04",
+      "originalQueries": "marine le pen lyon, meeting marine le pen, meeting marine le pen lyon, meeting marine le pen lyon 2017"
+    },
+    {
+      "id": "31",
+      "label": "Discours Mélenchon hologramme à Lyon",
+      "date": "2017-02-04",
+      "originalQueries": "mélenchon hologramme, meeting mélenchon hologramme"
+    },
+    {
+      "id": "32",
+      "label": "Discours Macron à Lyon",
+      "date": "2017-02-04",
+      "originalQueries": "macron lyon, premier ministre macron, macron lyon meeting"
+    },
+    {
+      "id": "33",
+      "label": "Après des mois de rumeurs sur différents forums, Sputnik publie un article sur l'homosexualité présumée d'Emmanuel Macron",
+      "date": "2017-02-04",
+      "originalQueries": "homosexualité macron, homosexualité de macron"
+    },
+    {
+      "id": "34",
+      "label": "Marine Le Pen sort son programme",
+      "date": "2017-02-04",
+      "originalQueries": "marine le pen sort son programme, marine le pen publie son programme, marine le pen programme"
+    },
+    {
+      "id": "35",
+      "label": "Sortie d'une vidéo de marine le pen",
+      "date": "2017-02-05",
+      "originalQueries": "marine le pen clip de campagne"
+    },
+    {
+      "id": "36",
+      "label": "Fillon déclare au 20h de France 2 \"Je ne suis pas autiste",
+      "date": "2017-02-05",
+      "originalQueries": "fillon autiste"
+    },
+    {
+      "id": "37",
+      "label": "Emission Politique de Marine Le Pen – meilleur score d’audience (16,7% d’audience)",
+      "date": "2017-02-09",
+      "originalQueries": "marine le pen émission politique Belkacem"
+    },
+    {
+      "id": "38",
+      "label": "Macron déclare «C’est une erreur de penser que le programme est le cœur d’une campagne»",
+      "date": "2017-02-12",
+      "originalQueries": "macron programme"
+    },
+    {
+      "id": "39",
+      "label": "Macron dans une interview sur la colonisation qualifie cette dernier de  \"Crime contre l'Humanité",
+      "date": "2017-02-15",
+      "originalQueries": "macron en algérie"
+    },
+    {
+      "id": "40",
+      "label": "Mélenchon publie une vidéo de 5h sur le chiffrage de son programme",
+      "date": "2017-02-19",
+      "originalQueries": "programme présidentiel 2017, programme jean luc mélenchon pdf, financement programme mélenchon"
+    },
+    {
+      "id": "41",
+      "label": "Marine Le Pen refuse de porter le voile pour entrer dans une mosquée lors d'un déplacement au Liban",
+      "date": "2017-02-21",
+      "originalQueries": "liban marine le pen, voile marine le pen liban, front national voile"
+    },
+    {
+      "id": "42",
+      "label": "Soutien de François Bayrou à Emmanuel Macron",
+      "date": "2017-02-22",
+      "originalQueries": "bayrou gouvernement macron, bayrou accord macron, alliance macron bayrou"
+    },
+    {
+      "id": "43",
+      "label": "Emission Politique de Jean Luc Mélenchon",
+      "date": "2017-02-23",
+      "originalQueries": "émission politique mélenchon"
+    },
+    {
+      "id": "44",
+      "label": "Macron dévile son programme économique dans une interview publiée dans les Echos (suppression de la taxe d'habitation évoquée)",
+      "date": "2017-02-23",
+      "originalQueries": "programme économique macron"
+    },
+    {
+      "id": "45",
+      "label": "Soutien de Yannick Jadot à BenoîtHamon",
+      "date": "2017-02-23",
+      "originalQueries": "jadot hamon"
+    },
+    {
+      "id": "46",
+      "label": "Annonce pas d’alliance Mélenchon/Hamon",
+      "date": "2017-02-26",
+      "originalQueries": "hamon programme, mélenchon programme"
+    },
+    {
+      "id": "47",
+      "label": "Meeting de Marine Le Pen à Nantes, attaque frontale des fonctionnaires et des magistrats dans le cadre des l'affaire des assistants parlementaires",
+      "date": "2017-02-26",
+      "originalQueries": "meeting nantes le pen, marine le pen fonctionnaires"
+    },
+    {
+      "id": "48",
+      "label": "Macron reçoit un oeuf lors de sa visite au salon de l'agriculture",
+      "date": "2017-03-01",
+      "originalQueries": "macron oeuf , macron oeuf salon agriculture, macron oeuf sur la tete, macron oeuf video"
+    },
+    {
+      "id": "49",
+      "label": "Fillon annonce le maintien de sa candidature",
+      "date": "2017-03-01",
+      "originalQueries": "françois fillon, fillon maintient sa candidature"
+    },
+    {
+      "id": "50",
+      "label": "Levée de l'immunité parlementaire de Marine Le Pen dans l'affaire des photos d'une décapitation de Daesh sur son compte Twitter",
+      "date": "2017-03-02",
+      "originalQueries": "immunité parlementaire le pen, levée immunité parlementaire marine le pen, immunité parlementaire levée pour marine le pen"
+    },
+    {
+      "id": "51",
+      "label": "Publication du programme de Macron",
+      "date": "2017-03-02",
+      "originalQueries": "macron programme, csg, taxe habitation macron,"
+    },
+    {
+      "id": "52",
+      "label": "Marine Le Pen refuse de se rendre devant le juge dans l'affaire des assistants parlementaires",
+      "date": "2017-03-04",
+      "originalQueries": "marine le pen refuse de rendre devant le juge"
+    },
+    {
+      "id": "53",
+      "label": "François Fillon organise un rasemblement au Trocadéro pour \"réunir la droite",
+      "date": "2017-03-05",
+      "originalQueries": "fillon trocadéro"
+    },
+    {
+      "id": "54",
+      "label": "Article qui révèle des soupçons de favoritisme dans l'organisation d'un événement à Las Vegas quand Macron était à Bercy",
+      "date": "2017-03-07",
+      "originalQueries": "las vegas macron, french tech macron las vegas, havas macron las vegas favoritisme"
+    },
+    {
+      "id": "55",
+      "label": "Emission Politique de Benoît Hamon - pire audience",
+      "date": "2017-03-09",
+      "originalQueries": "hamon émission politique"
+    },
+    {
+      "id": "56",
+      "label": "LR publie une caricature jugée antisémite d'Emmanuel Macron",
+      "date": "2017-03-10",
+      "originalQueries": "caricature galaxie macron, galaxie macron, la vérité sur la galaxie macron, LR Macron, caricature lr macron"
+    },
+    {
+      "id": "57",
+      "label": "Le JDD révèle que François Fillon s'est fait offrir des costumes par \"un ami généreux",
+      "date": "2017-03-11",
+      "originalQueries": "françois fillon costume, affaire fillon, pénélope fillon"
+    },
+    {
+      "id": "58",
+      "label": "Mise en examen de Fillon",
+      "date": "2017-03-14",
+      "originalQueries": "mise en examen fillon, mise en examen penelope fillon, penelope fillon, christine angot filllon, penelope fillon est elle mise en examen, mise en examen fillon possible"
+    },
+    {
+      "id": "59",
+      "label": "Hamon publie son programme",
+      "date": "2017-03-16",
+      "originalQueries": "hamon programme"
+    },
+    {
+      "id": "60",
+      "label": "Dupont Aignan quitte le JT de TF1pour protester contre l'absence des \"petits candidats\" au débat organisé la semaine suivante",
+      "date": "2017-03-18",
+      "originalQueries": "dupont aignan tf1, dupont aignan quitte JT, dupont aignan TF1 video, incident dupont aignan tf1, dupont aignan quitte le plateau de TF1,"
+    },
+    {
+      "id": "61",
+      "label": "Publication de la liste officielle des candidats par Conseil Constitutionnel",
+      "date": "2017-03-18",
+      "originalQueries": "csa temps de parole, temps de parole candidat, temps de parole présidentielle"
+    },
+    {
+      "id": "62",
+      "label": "Mélenchon rassemble 100 000 personnes place de la République",
+      "date": "2017-03-18",
+      "originalQueries": "melenchon bastille , melenchon meeting"
+    },
+    {
+      "id": "63",
+      "label": "Meeting de Hamon à Bercy",
+      "date": "2017-03-19",
+      "originalQueries": "hamon bercy, hamon meeting, meeting hamon bercy"
+    },
+    {
+      "id": "64",
+      "label": "Premier débat entre les 5 principaux (10 millions de spectateurs)",
+      "date": "2017-03-20",
+      "originalQueries": "débat présidentiel live, regarder le débat en direct, débat 20 mars"
+    },
+    {
+      "id": "65",
+      "label": "Publication du patrimoine des candidats",
+      "date": "2017-03-22",
+      "originalQueries": "patrimoine candidats présidentielle, déclaration de patrimoine des candidats à la présidentielle"
+    },
+    {
+      "id": "66",
+      "label": "Soutien de Cédric Villani à Macron",
+      "date": "2017-03-22",
+      "originalQueries": "villani macron, macron villani"
+    },
+    {
+      "id": "67",
+      "label": "Emission Politique de Fillon (bonne audience 14,9% clash angot)",
+      "date": "2017-03-23",
+      "originalQueries": "emission politique fillon"
+    },
+    {
+      "id": "68",
+      "label": "Marine Le Pen rencontre Vladimir Poutine",
+      "date": "2017-03-24",
+      "originalQueries": "marine le pen poutine, le pen poutine"
+    },
+    {
+      "id": "69",
+      "label": "Benoît Hamon accuse Mélenchon d'être d'accord avec Poutine",
+      "date": "2017-03-26",
+      "originalQueries": "melenchon poutine"
+    },
+    {
+      "id": "70",
+      "label": "Mise en examen de Pénélope Fillon",
+      "date": "2017-03-28",
+      "originalQueries": "pénélope fillon mise en examen, françois fillon, affaire fillon, emploi fictif"
+    },
+    {
+      "id": "71",
+      "label": "Manuel Valls annonce qu'il votera Macron",
+      "date": "2017-03-29",
+      "originalQueries": "valls soutien macron, valls vote macron"
+    },
+    {
+      "id": "72",
+      "label": "Appel de Hamon pour une union de la gauche",
+      "date": "2017-03-29",
+      "originalQueries": "alliance hamon, alliane hamon mélenchon"
+    },
+    {
+      "id": "73",
+      "label": "Visite (chahutée) de Marine Le Pen à Pordic",
+      "date": "2017-03-30",
+      "originalQueries": "marine le pen pordic, marine le pen anti fn pordic, marine le pen eleveur pordic"
+    },
+    {
+      "id": "74",
+      "label": "Poutou chez Ruquier, polémique",
+      "date": "2017-04-01",
+      "originalQueries": "philippe poutou onpc, philippe poutou ruquier,"
+    },
+    {
+      "id": "75",
+      "label": "Hamon rend public son simulateur de revenu universel",
+      "date": "2017-04-03",
+      "originalQueries": "simulateur revenu universel, simulateur hamon revenu universel"
+    },
+    {
+      "id": "76",
+      "label": "Renaud soutient Macron",
+      "date": "2017-04-03",
+      "originalQueries": "renaud macron, renaud vote macron"
+    },
+    {
+      "id": "77",
+      "label": "Débat avec les 11 candidats BFM CNews – Poutou / Mélenchon / Marine Le Pen font le buzz",
+      "date": "2017-04-04",
+      "originalQueries": "regarder le débat en live, débat 4 avril, live du débat"
+    },
+    {
+      "id": "78",
+      "label": "Francois Fillon enfariné à Strasbourg",
+      "date": "2017-04-06",
+      "originalQueries": "fillon farine"
+    },
+    {
+      "id": "79",
+      "label": "Emission politique Macron",
+      "date": "2017-04-06",
+      "originalQueries": "émission politique macron, emission politique france 2 macron"
+    },
+    {
+      "id": "80",
+      "label": "Sarkozy soutient Fillon",
+      "date": "2017-04-07",
+      "originalQueries": "sarkozy soutient fillon"
+    },
+    {
+      "id": "81",
+      "label": "Meeting de Marine Le Pen à Ajaccio perturbé par des manifestants",
+      "date": "2017-04-08",
+      "originalQueries": "ajaccio marine le pen, corse marine le pen,"
+    },
+    {
+      "id": "82",
+      "label": "Marine Le Pen annonce que la France n'est pas responsable de la rafle du vel d'hiv",
+      "date": "2017-04-09",
+      "originalQueries": "marine le pen vel d'hiv, marine le pen france vel d'hiv"
+    },
+    {
+      "id": "83",
+      "label": "Violences contre des journalistes (Hugo Clément, Louis Morin) au meeting de François Fillon",
+      "date": "2017-04-09",
+      "originalQueries": "hugo clément gifle"
+    },
+    {
+      "id": "84",
+      "label": "Sortie officielle des clips de campagne",
+      "date": "2017-04-10",
+      "originalQueries": "clip de campagne, poutou clip de campagne, clip de campagne marine le pen,"
+    },
+    {
+      "id": "85",
+      "label": "Les femen perturbent le meeting de Marine Le Pen",
+      "date": "2017-04-17",
+      "originalQueries": "marine le pen femen, marine le pen femen meeting"
+    },
+    {
+      "id": "86",
+      "label": "Grand oral de tous les candidas sur France 2 + Attentat des Champs Elysées",
+      "date": "2017-04-20",
+      "originalQueries": "débat présidentiel,"
+    },
+    {
+      "id": "87",
+      "label": "Premier tour élection",
+      "date": "2017-04-23",
+      "originalQueries": "résultats présidentielle 2017, résultats premier tour présidentielle 2017"
+    },
+    {
+      "id": "88",
+      "label": "Interview de Macron dans le magazine Têtu (je ne suis pas gay)",
+      "date": "2017-04-24",
+      "originalQueries": "tetu macron , homosexualité macron"
+    },
+    {
+      "id": "89",
+      "label": "Whirpool déplacement Marine Le Pen / Macron",
+      "date": "2017-04-26",
+      "originalQueries": "whirlpool marine le pen, whirlpool macron marine le pen"
+    },
+    {
+      "id": "90",
+      "label": "Affiche de Marine Le Pen Twitter",
+      "date": "2017-04-26",
+      "originalQueries": "affiche marine le pen , affiche marine le pen second tour, affiche marine le pen 2017"
+    },
+    {
+      "id": "91",
+      "label": "Soutien Dupont-Aignant à Marine Le Pen",
+      "date": "2017-04-30",
+      "originalQueries": "dupont aignan le pen , nicolas dupont aignan et marine le pen"
+    },
+    {
+      "id": "92",
+      "label": "Marine Le Pen plagie du discours de Fillon",
+      "date": "2017-04-30",
+      "originalQueries": "plagiat fillon, marine le pen fillon plagiat, discours le pen fillon,"
+    },
+    {
+      "id": "93",
+      "label": "Marine Le Pen Meeting Villepinte",
+      "date": "2017-05-01",
+      "originalQueries": "marine le pen villepinte, marine le pen meeting"
+    },
+    {
+      "id": "94",
+      "label": "Défilé Jean-Marie Le Pen sans Marine Le Pen, les femen font une action",
+      "date": "2017-05-01",
+      "originalQueries": "marine le pen villepinte"
+    },
+    {
+      "id": "95",
+      "label": "Débat de l’entre-deux tours (marine le pen comparée à voldemort, envahisseurs)",
+      "date": "2017-05-03",
+      "originalQueries": "débat macron le pen , le pen vs macron, macron le pen tv,"
+    },
+    {
+      "id": "96",
+      "label": "Marine Le Pen oeuf en Bretagne",
+      "date": "2017-05-04",
+      "originalQueries": "marine le pen oeuf, le pen oeuf"
+    },
+    {
+      "id": "97",
+      "label": "Obama soutient Macron",
+      "date": "2017-05-04",
+      "originalQueries": "macron obama , obama endorses macron , obama macron video, obama supports macron"
+    },
+    {
+      "id": "98",
+      "label": "Piratage de l'équipe de campagne de Macron",
+      "date": "2017-05-06",
+      "originalQueries": "piratage informatique macron, équipe de campagne macron, piratage informatique, hacker,"
+    },
+    {
+      "id": "99",
+      "label": "Macron discours Louvre",
+      "date": "2017-05-07",
+      "originalQueries": "macron louvre illuminati, macron reptilien"
+    },
+    {
+      "id": "100",
+      "label": "Second tour élection",
+      "date": "2017-05-07",
+      "originalQueries": "date deuxième tour, sondage deuxième tour présidentielle 2017, résultats présidentielle 2017"
+    },
+    {
+      "id": "101",
+      "label": "Marine le pen danse après sa défaite",
+      "date": "2017-05-07",
+      "originalQueries": "marine le pen danse, marine le pen danse défaite"
+    },
+    {
+      "id": "102",
+      "label": "Investiture de Macron",
+      "date": "2017-05-14",
+      "originalQueries": "investiture macron, brigitte macron investiture, brigitte macron"
+    },
+    {
+      "id": "103",
+      "label": "Macron se rend à l'hopital de Percy au chevet de soldats blessés",
+      "date": "2017-05-14",
+      "originalQueries": "macron percy, macron hpotial percy"
+    },
+    {
+      "id": "104",
+      "label": "Photo officielle présidentielle de Macron",
+      "date": "2017-06-29",
+      "originalQueries": "portrait officiel macron"
+    },
+    {
+      "id": "105",
+      "label": "Photo du Kebab de Benoît Hamon",
+      "date": "2017-06-29",
+      "originalQueries": "kebab hamon"
+    },
+    {
+      "id": "106",
+      "label": "Marine Le Pen mise en examen pour abus de confiance dans l'affaire des assistants parlementaires",
+      "date": "2017-06-30",
+      "originalQueries": "marine le pen mise en examen, assistants parlementaires"
+    },
+    {
+      "id": "107",
+      "label": "Hamon organise un rassemblement place de la république",
+      "date": "2017-04-19",
+      "originalQueries": "Hamon place de la république"
+    }
+]
 }

@@ -2,10 +2,14 @@ import _ from 'lodash';
 import Baobab, { monkey } from 'baobab';
 
 const timeSeries = {
-  news: require('../assets/data/timeseries_candidates_news.json'),
-  web: require('../assets/data/timeseries_candidates_web.json'),
-  youtube: require('../assets/data/timeseries_candidates_youtube.json'),
+  sources: {
+    news: require('../assets/data/timeseries_candidates_news.json'),
+    web: require('../assets/data/timeseries_candidates_web.json'),
+    youtube: require('../assets/data/timeseries_candidates_youtube.json'),
+  },
 };
+
+const allQueries = require('../assets/data/queries_all.json');
 
 const config = require('../assets/config.json');
 
@@ -19,6 +23,11 @@ export default new Baobab({
       .keyBy('id')
       .mapValues(() => true)
       .value(),
+    topics: _(config.topics)
+      .keyBy('id')
+      .mapValues(() => true)
+      .value(),
+    event: null,
     options: {
       flatten: false,
     },
@@ -26,6 +35,30 @@ export default new Baobab({
   data: {
     config,
     timeSeries,
+    allQueries,
+
+    // The filtered queries:
+    queries: monkey({
+      cursors: {
+        allQueries: ['data', 'allQueries'],
+        candidates: ['nav', 'candidates'],
+        topics: ['nav', 'topics'],
+        event: ['nav', 'event'],
+      },
+      get(data) {
+        const { candidates, topics, event } = data;
+        return _.filter(
+          data.allQueries,
+          query => (
+            query.candidates.some(str => candidates[str])
+            && query.topics.some(str => topics[str])
+            && (!event || query.events.includes(event))
+          )
+        )
+      },
+    }),
+
+    // The curves to display:
     curves: monkey({
       cursors: {
         timeSeries: ['data', 'timeSeries'],
@@ -34,7 +67,7 @@ export default new Baobab({
         candidatesOn: ['nav', 'candidates'],
         sourcesOn: ['nav', 'sources'],
       },
-      get: function(data) {
+      get(data) {
         const curves = [];
         const sources = data.candidates.filter(
           ({ id }) => data.candidatesOn[id]
@@ -52,7 +85,7 @@ export default new Baobab({
                   color: candidate.color,
                   style: source.style,
                   data: _.map(
-                    data.timeSeries[source.id][candidate.id],
+                    data.timeSeries.sources[source.id][candidate.id],
                     ({ value }, d) => ({
                       x: new Date(d),
                       y: value,
@@ -63,7 +96,7 @@ export default new Baobab({
           );
 
         return curves;
-      }
-    })
+      },
+    }),
   },
 });
