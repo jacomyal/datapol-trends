@@ -27,6 +27,7 @@ export default new Baobab({
     config,
     timeSeries,
     allQueries,
+    querySeries: {},
 
     // The filtered queries:
     queries: monkey({
