@@ -2,18 +2,21 @@
   "sources": [
     {
       "id": "web",
-      "label": "Web",
-      "style": ""
+      "label": "Web"
     },
     {
       "id": "news",
       "label": "News",
-      "style": "stroke-dasharray:10,8;"
+      "style": {
+        "strokeDasharray": "10,8"
+      }
     },
     {
       "id": "youtube",
       "label": "Youtube",
-      "style": "stroke-dasharray:5,4;"
+      "style": {
+        "strokeDasharray": "5,4"
+      }
     }
   ],
   "candidates": [

@@ -1,16 +1,21 @@
 import React, { Component } from 'react';
 import { branch } from 'baobab-react/higher-order';
 
-import { setOption } from '../actions';
+import { setOption, toggleCandidate, toggleSource } from '../actions';
 
 export default branch(
   {
     candidates: ['data', 'config', 'candidates'],
     sources: ['data', 'config', 'sources'],
+    candidatesOn: ['nav', 'candidates'],
+    sourcesOn: ['nav', 'sources'],
   },
   class Form extends Component {
     render() {
-      const { candidates, sources } = this.props;
+      const {
+        candidates, sources,
+        candidatesOn, sourcesOn,
+      } = this.props;
 
       return (
         <aside className="col-sm-3 max-height">
@@ -33,7 +38,13 @@ export default branch(
                           className="form-check-input"
                           name="option"
                           type="checkbox"
-                          value={ candidate.id }
+                          checked={ candidatesOn[candidate.id] }
+                          onChange={
+                            e => this.props.dispatch(
+                              toggleCandidate,
+                              { candidate: candidate.id }
+                            )
+                          }
                         />
                         <img
                           className="img-fluid"
@@ -71,7 +82,13 @@ export default branch(
                           className="form-check-input"
                           name="option"
                           type="checkbox"
-                          value={ source.id }
+                          checked={ sourcesOn[source.id] }
+                          onChange={
+                            e => this.props.dispatch(
+                              toggleSource,
+                              { source: source.id }
+                            )
+                          }
                         />
                         <img
                           className="img-fluid"
