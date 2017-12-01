@@ -15,6 +15,7 @@ const config = require('../assets/config.json');
 
 export default new Baobab({
   nav: {
+    querySearch: undefined,
     sources: _(config.sources)
       .keyBy('id')
       .mapValues(() => true)
@@ -28,6 +29,7 @@ export default new Baobab({
       .mapValues(() => true)
       .value(),
     event: null,
+    queries: [],
     options: {
       flatten: false,
     },
@@ -47,6 +49,7 @@ export default new Baobab({
       },
       get(data) {
         const { candidates, categories, event } = data;
+
         return (
           _(data.allQueries)
             .pickBy(o => (
@@ -58,6 +61,7 @@ export default new Baobab({
               ...o,
               id: query,
             }))
+            .value()
         );
       },
     }),

@@ -1,4 +1,4 @@
-import { mapValues } from 'lodash';
+import { mapValues, without } from 'lodash';
 
 import state from './state';
 
@@ -20,8 +20,19 @@ export function selectEvent(state, { event }) {
   return state;
 };
 
-export function showQuery(state, { query }) {
-  // TODO
+export function searchQueries(state, { search }) {
+  state.set(['nav', 'querySearch'], search);
+  return state;
+};
+
+export function toggleQuery(state, { query }) {
+  const queries = state.get('nav', 'queries');
+  state.set(
+    ['nav', 'queries'],
+    queries.includes(query) ?
+      without(queries, query) :
+      queries.concat(query)
+  );
   return state;
 };
 
@@ -29,5 +40,6 @@ export default {
   setOption,
   toggleSelection,
   selectEvent,
-  showQuery,
+  toggleQuery,
+  searchQueries,
 };

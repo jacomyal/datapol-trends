@@ -2,7 +2,11 @@ import cls from 'classnames';
 import React, { Component } from 'react';
 import { branch } from 'baobab-react/higher-order';
 
-import { setOption, toggleSelection, showQuery, selectEvent } from '../actions';
+import {
+  searchQueries,
+  setOption, selectEvent,
+  toggleSelection, toggleQuery,
+} from '../actions';
 
 const TABS = [
   {
@@ -140,10 +144,86 @@ const TABS = [
     id: 'queries',
     label: 'Requêtes',
     component(props) {
+      const highlightedQueriesIndex = _.keyBy(props.highlightedQueries);
+      const queries = props.queries.filter(
+        query => !highlightedQueriesIndex[query.id]
+      );
+
       return (
         <form onSubmit={ e => e.preventDefault() }>
+          <div className="form-group">
+            <label
+              className="col-form-label sr-only"
+              htmlFor="searchQueries"
+            >
+              Chercher dans les requêtes
+            </label>
+            <input
+              type="search"
+              className="form-control"
+              id="searchQueries"
+              placeholder="rechercher"
+              value={ props.querySearch || undefined }
+              onChange={
+                e => props.dispatch(
+                  searchQueries,
+                  { search: e.target.value }
+                )
+              }
+            />
+          </div>
+          <hr />
           {
-            props.queries.map(query => (
+            props.highlightedQueries.length ?
+              <label className="control-label">Requêtes sélectionnées</label> :
+              undefined
+          }
+          {
+            props.highlightedQueries.map(query => (
+              <div
+                key={ 'query-' + query }
+                className="form-check"
+              >
+                <label
+                  htmlFor={ 'query-' + query }
+                  className="form-check-label"
+                >
+                  <input
+                    id={ 'query-' + query }
+                    className="form-check-input"
+                    name="option"
+                    type="checkbox"
+                    checked={ true }
+                    onChange={
+                      e => props.dispatch(
+                        toggleQuery,
+                        { query: query }
+                      )
+                    }
+                  />
+                  <span className="badge">
+                    <strong>{ query }</strong>
+                  </span>
+                </label>
+              </div>
+            ))
+          }
+          {
+            props.highlightedQueries.length ?
+              <hr /> :
+              undefined
+          }
+          {
+            queries.length ?
+              <label className="control-label">
+                { queries.length } Requête{ queries.length > 1 ? 's' : null }
+              </label> :
+              <label className="control-label">
+                Aucune requête dans les filtres actifs
+              </label>
+          }
+          {
+            queries.slice(0, 50).map(query => (
               <div
                 key={ 'query-' + query.id }
                 className="form-check"
@@ -156,11 +236,11 @@ const TABS = [
                     id={ 'query-' + query.id }
                     className="form-check-input"
                     name="option"
-                    type="radio"
-                    checked={ query.id === props.query }
+                    type="checkbox"
+                    checked={ false }
                     onChange={
                       e => props.dispatch(
-                        showQuery,
+                        toggleQuery,
                         { query: query.id }
                       )
                     }
@@ -171,6 +251,13 @@ const TABS = [
                 </label>
               </div>
             ))
+          }
+          {
+            queries.length > 50 ?
+              <label className="control-label">
+                ...{ queries.length - 50 } requêtes restantes
+              </label> :
+              undefined
           }
         </form>
       );
@@ -226,10 +313,13 @@ export default branch(
     sources: ['data', 'config', 'sources'],
     events: ['data', 'config', 'events'],
     queries: ['data', 'queries'],
+
+    // Selection
+    highlightedQueries: ['nav', 'queries'],
     candidatesOn: ['nav', 'candidates'],
     categoriesOn: ['nav', 'categories'],
+    querySearch: ['nav', 'querySearch'],
     sourcesOn: ['nav', 'sources'],
-    query: ['nav', 'query'],
     event: ['nav', 'event'],
   },
   class Form extends Component {
