@@ -4,6 +4,10 @@
 
 .max-height-tab {
   height: calc(100% - 3.5em);
+  /* Landscape tablets and medium desktops */
+  @media (min-width: 992px) and (max-width: 1199px) {
+    height: calc(100% - 2.5em);
+  }
 }
 
 .tab-content {
@@ -16,5 +20,9 @@
 
   form {
     padding: 1rem 0;
+    /* Landscape tablets and medium desktops */
+    @media (min-width: 992px) and (max-width: 1199px) {
+      font-size: 0.9em;
+    }
   }
 }
