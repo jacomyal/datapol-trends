@@ -99,7 +99,7 @@ const TABS = [
     id: 'queries',
     label: 'Requêtes',
     component(props) {
-      const highlightedQueriesIndex = _.keyBy(props.highlightedQueries);
+      const highlightedQueriesIndex = _.keyBy(props.highlightedQueries, 'id');
       const queries = props.queries.filter(
         query => !highlightedQueriesIndex[query.id]
       );
@@ -141,15 +141,15 @@ const TABS = [
           {
             props.highlightedQueries.map(query => (
               <div
-                key={ 'query-' + query }
+                key={ 'query-' + query.id }
                 className="form-check"
               >
                 <label
-                  htmlFor={ 'query-' + query }
+                  htmlFor={ 'query-' + query .id}
                   className="form-check-label"
                 >
                   <input
-                    id={ 'query-' + query }
+                    id={ 'query-' + query.id }
                     className="form-check-input"
                     name="option"
                     type="checkbox"
@@ -157,12 +157,14 @@ const TABS = [
                     onChange={
                       e => props.dispatch(
                         toggleQuery,
-                        { query: query }
+                        { query: query.id }
                       )
                     }
                   />
                   <span className="badge">
-                    <strong>{ query }</strong>
+                    <strong style={{ color: query.color }}>{
+                      query.id
+                    }</strong>
                   </span>
                 </label>
               </div>

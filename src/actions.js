@@ -3,6 +3,29 @@ import ajax from 'djax';
 
 import state from './state';
 
+const COLORS = [
+  '#ff6cf5',
+  '#5ec12a',
+  '#d140f3',
+  '#00833b',
+  '#0041da',
+  '#d37e00',
+  '#53079d',
+  '#a7b075',
+  '#837fff',
+  '#be4400',
+  '#51a5ff',
+  '#ff603b',
+  '#32b9db',
+  '#d30029',
+  '#1e377b',
+  '#de9e5a',
+  '#96005f',
+  '#5d5500',
+  '#db95c6',
+  '#850030',
+];
+
 export function setOption(state, { option, value }) {
   state.set(['nav', 'options', option], value);
   return state;
@@ -31,9 +54,12 @@ export function toggleQuery(state, { query }) {
   const queryData = state.get('data', 'querySeries', query);
   state.set(
     ['nav', 'queries'],
-    queries.includes(query) ?
-      without(queries, query) :
-      queries.concat(query)
+    queries.some(o => o.id === query) ?
+      queries.filter(o => o.id !== query) :
+      queries.concat({
+        id: query,
+        color: COLORS[Math.floor(Math.random() * COLORS.length)]
+      })
   );
   if (!queryData) {
     ajax("assets/data/" + query + ".json")
