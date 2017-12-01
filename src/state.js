@@ -59,7 +59,7 @@ export default new Baobab({
     }),
 
     // The curves to display:
-    curves: monkey({
+    candidateCurves: monkey({
       cursors: {
         timeSeries: ['data', 'timeSeries'],
         candidates: ['data', 'config', 'candidates'],
@@ -72,7 +72,7 @@ export default new Baobab({
           .filter(({ id }) => data.candidatesOn[id])
           .forEach(candidate => {
             curves.push({
-              candidate: candidate.id,
+              id: candidate.id,
               color: candidate.color,
               data: _.map(
                 data.timeSeries[candidate.id],
@@ -80,6 +80,32 @@ export default new Baobab({
                   x: new Date(d),
                   y: value,
                 }),
+              )
+            })
+          });
+
+        return curves;
+      },
+    }),
+    queryCurves: monkey({
+      cursors: {
+        queries: ['nav', 'queries'],
+        querySeries: ['data', 'querySeries'],
+      },
+      get(data) {
+        const curves = [];
+
+        data.queries
+          .filter(({ id }) => data.querySeries[id])
+          .forEach(query => {
+            curves.push({
+              id: query.id,
+              color: query.color,
+              data: data.querySeries[query.id].map(
+                ({ value, date }) => ({
+                  x: new Date(date),
+                  y: value,
+                })
               )
             })
           });

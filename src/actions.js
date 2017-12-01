@@ -52,19 +52,33 @@ export function searchQueries(state, { search }) {
 export function toggleQuery(state, { query }) {
   const queries = state.get('nav', 'queries');
   const queryData = state.get('data', 'querySeries', query);
-  state.set(
-    ['nav', 'queries'],
-    queries.some(o => o.id === query) ?
-      queries.filter(o => o.id !== query) :
+
+  if (queries.some(o => o.id === query)) {
+    state.set(
+      ['nav', 'queries'],
+      queries.filter(o => o.id !== query)
+    );
+  } else {
+    state.set(
+      ['nav', 'queries'],
       queries.concat({
         id: query,
         color: COLORS[Math.floor(Math.random() * COLORS.length)]
       })
-  );
-  if (!queryData) {
-    ajax("assets/data/queries/" + query + ".json")
-    .done(queryData => state.set(['data', 'querySeries', query], queryData));
+    );
+
+    // TODO:
+    // Clean that side effect?
+    if (!queryData) {
+      ajax(
+        'assets/data/queries/' + query + '.json'
+      ).done(queryData => state.set(
+        ['data', 'querySeries', query],
+        queryData.timeseries
+      ));
+    }
   }
+
   return state;
 };
 

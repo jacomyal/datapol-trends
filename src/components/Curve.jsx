@@ -13,11 +13,12 @@ const AXIS_STYLE = {
   },
 };
 
-function Candidates(props) {
+function Curves({ size, curves, title }) {
   return (
-    props.curves.length ?
+    <div>
+      <h3>{ title }</h3>
       <VictoryChart
-        width={ props.size.width }
+        width={ size.width }
         height={ 600 }
       >
         <VictoryAxis
@@ -31,9 +32,9 @@ function Candidates(props) {
           style={ AXIS_STYLE }
         />
         {
-          props.curves.map(o => (
+          curves.map(o => (
             <VictoryLine
-              key={ o.candidate }
+              key={ o.id }
               data={ o.data }
               style={{
                 data: {
@@ -45,60 +46,38 @@ function Candidates(props) {
             />
           ))
         }
-      </VictoryChart> :
-      <div>Aucune courbe à afficher</div>
-  );
-}
-
-function Queries(props) {
-  return (
-    props.curves.length ?
-      <VictoryChart
-        width={ props.size.width }
-        height={ 600 }
-      >
-        <VictoryAxis
-          tickFormat={
-            x => new Date(x).toISOString().substr(0, 10)
-          }
-          style={ AXIS_STYLE }
-        />
-        <VictoryAxis
-          dependentAxis
-          style={ AXIS_STYLE }
-        />
-        {
-          props.curves.map(o => (
-            <VictoryLine
-              key={ o.candidate }
-              data={ o.data }
-              style={{
-                data: {
-                  ...o.style,
-                  stroke: o.color,
-                  strokeWidth: 1,
-                },
-              }}
-            />
-          ))
-        }
-      </VictoryChart> :
-      <div>Aucune courbe à afficher</div>
+      </VictoryChart>
+    </div>
   );
 }
 
 export default sizeMe()(branch(
   {
-    curves: ['data', 'curves'],
+    candidateCurves: ['data', 'candidateCurves'],
+    queryCurves: ['data', 'queryCurves'],
   },
   class Curve extends Component {
     render() {
+      const { size, candidateCurves, queryCurves } = this.props;
+
       return (
         <div className="container-content scrollable col-sm-9">
           <h1>Chronologie de la campagne</h1>
           <div className="container-viz">
-            <Candidates { ...this.props } />
-            <Queries { ...this.props } />
+            {
+              candidateCurves.length ?
+                <Curves
+                  { ...{ size, title: 'Candidats', curves: candidateCurves } }
+                /> :
+                undefined
+            }
+            {
+              queryCurves.length ?
+                <Curves
+                  { ...{ size, title: 'Requêtes', curves: queryCurves } }
+                /> :
+                undefined
+            }
           </div>
         </div>
       );
