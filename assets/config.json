@@ -1,0 +1,76 @@
+{
+  "sources": [
+    {
+      "id": "web",
+      "label": "Web",
+      "style": ""
+    },
+    {
+      "id": "news",
+      "label": "News",
+      "style": "stroke-dasharray:10,8;"
+    },
+    {
+      "id": "youtube",
+      "label": "Youtube",
+      "style": "stroke-dasharray:5,4;"
+    }
+  ],
+  "candidates": [
+    {
+      "id": "macron",
+      "label": "Emmanuel Macron",
+      "color": "#007bc7"
+    },
+    {
+      "id": "le pen",
+      "label": "Marine Le Pen",
+      "color": "#ff5e32"
+    },
+    {
+      "id": "fillon",
+      "label": "François Fillon",
+      "color": "#ad81ff"
+    },
+    {
+      "id": "mélenchon",
+      "label": "Jean-Luc Mélenchon",
+      "color": "#8b9100"
+    },
+    {
+      "id": "hamon",
+      "label": "Benoît Hamon",
+      "color": "#86007b"
+    },
+    {
+      "id": "dupont-aignan",
+      "label": "Nicolas Dupont-Aignan",
+      "color": "#bcaa60"
+    },
+    {
+      "id": "lassalle",
+      "label": "Jean Lassalle",
+      "color": "#ff5dc2"
+    },
+    {
+      "id": "poutou",
+      "label": "Philippe Poutou",
+      "color": "#3c3174"
+    },
+    {
+      "id": "asselineau",
+      "label": "François Asselineau",
+      "color": "#ee8eae"
+    },
+    {
+      "id": "arthaud",
+      "label": "Nathalie Arthaud",
+      "color": "#77073e"
+    },
+    {
+      "id": "cheminade",
+      "label": "Jacques Cheminade",
+      "color": "#b3a0ea"
+    }
+  ]
+}
