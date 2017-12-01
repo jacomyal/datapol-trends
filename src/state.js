@@ -58,7 +58,32 @@ export default new Baobab({
       },
     }),
 
-    // The curves to display:
+    // The data to display:
+    eventPoints: monkey({
+      cursors: {
+        events: ['data', 'config', 'events'],
+      },
+      get({ events }) {
+        const pointsPerDay = {};
+        const points = events.map(event => {
+          pointsPerDay[event.date] = pointsPerDay[event.date] || 0;
+          const point = {
+            id: event.id,
+            date: event.date,
+            label: event.label,
+            x: new Date(event.date),
+            y: -pointsPerDay[event.date],
+            symbol: 'square',
+          };
+
+          pointsPerDay[event.date] += 2;
+
+          return point;
+        });
+
+        return points;
+      },
+    }),
     candidateCurves: monkey({
       cursors: {
         timeSeries: ['data', 'timeSeries'],

@@ -1,7 +1,10 @@
 import sizeMe from 'react-sizeme';
 import React, { Component } from 'react';
 import { branch } from 'baobab-react/higher-order';
-import { VictoryChart, VictoryAxis, VictoryLine } from 'victory';
+import {
+  VictoryChart, VictoryAxis, VictoryTooltip,
+  VictoryLine, VictoryScatter
+} from 'victory';
 
 const AXIS_STYLE = {
   axis: {
@@ -13,7 +16,7 @@ const AXIS_STYLE = {
   },
 };
 
-function Curves({ size, curves, title }) {
+function Curves({ size, curves, title, points }) {
   return (
     <div>
       <h3>{ title }</h3>
@@ -49,6 +52,21 @@ function Curves({ size, curves, title }) {
             />
           ))
         }
+        {
+          points ?
+            <VictoryScatter
+              style={{
+                data: { fill: '#333' }
+              }}
+              size={ 5 }
+              data={ points }
+              labels={ o => o.label }
+              labelComponent={
+                <VictoryTooltip />
+              }
+            /> :
+            undefined
+        }
       </VictoryChart>
     </div>
   );
@@ -58,10 +76,16 @@ export default sizeMe()(branch(
   {
     candidateCurves: ['data', 'candidateCurves'],
     queryCurves: ['data', 'queryCurves'],
+    eventPoints: ['data', 'eventPoints'],
+    event: ['nav', 'event'],
   },
   class Curve extends Component {
     render() {
-      const { size, candidateCurves, queryCurves } = this.props;
+      const {
+        size,
+        candidateCurves, queryCurves,
+        eventPoints, event,
+      } = this.props;
 
       return (
         <div className="container-content scrollable col-sm-9">
@@ -70,14 +94,35 @@ export default sizeMe()(branch(
             {
               candidateCurves.length ?
                 <Curves
-                  { ...{ size, title: 'Candidats', curves: candidateCurves } }
+                  { ...{
+                    size,
+                    title: 'Candidats',
+                    curves: candidateCurves,
+                    points: eventPoints.map(point => (
+                      point.id === event ?
+                        {
+                          ...point,
+                          size: 10,
+                          fill: '#fff',
+                          stroke: '#000',
+                          strokeWidth: 3,
+                          symbol: 'circle',
+                          zIndex: 1000,
+                        } :
+                        point
+                    )),
+                  } }
                 /> :
                 undefined
             }
             {
               queryCurves.length ?
                 <Curves
-                  { ...{ size, title: 'Requêtes', curves: queryCurves } }
+                  { ...{
+                    size,
+                    title: 'Requêtes',
+                    curves: queryCurves,
+                  } }
                 /> :
                 undefined
             }
