@@ -7,24 +7,20 @@ export function setOption(state, { option, value }) {
   return state;
 };
 
-export function toggleCandidate(state, { candidate }) {
+export function toggleSelection(state, { type, value }) {
   state.set(
-    ['nav', 'candidates', candidate],
-    !state.get('nav', 'candidates', candidate)
+    ['nav', type, value],
+    !state.get('nav', type, value)
   );
   return state;
 };
 
-export function toggleSource(state, { source }) {
-  state.set(
-    ['nav', 'sources', source],
-    !state.get('nav', 'sources', source)
-  );
+export function selectEvent(state, { event }) {
+  state.set(['nav', 'event'], event);
   return state;
 };
 
 export default {
   setOption,
-  toggleCandidate,
-  toggleSource,
+  toggleSelection,
 };
