@@ -14,7 +14,14 @@ html, body {
   height: 100%;
   overflow: hidden;
 }
-
+body {
+  > div {
+    &:first-child {
+      height: 100%;
+      overflow: hidden;
+    }
+  }
+}
 .scrollable {
   height: 100%;
   overflow: auto;

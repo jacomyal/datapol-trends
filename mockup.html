@@ -11,205 +11,207 @@
         <!-- Place favicon.ico in the root directory -->
     </head>
     <body>
-      <main role="main" class="container-fluid max-height-base no-overflow">
-        <div class="row max-height">
-          <aside class="col-sm-4 col-md-3 max-height no-padding-left">
+      <div>
+        <main role="main" class="container-fluid max-height-base no-overflow">
+          <div class="row max-height">
+            <aside class="col-sm-4 col-md-3 max-height no-padding-left">
 
-            <ul class="nav nav-tabs" id="myTab" role="tablist">
-              <li class="nav-item">
-                <!-- Add and remove class active-->
-                <a class="nav-link active" id="candidats-tab" data-toggle="tab" href="#candidats" role="tab" aria-controls="candidats" aria-selected="true">Candidats</a>
-              </li>
-              <li class="nav-item">
-                <!-- Add and remove class active-->
-                <a class="nav-link" id="queries-tab" data-toggle="tab" href="#queries" role="tab" aria-controls="queries" aria-selected="false">Queries</a>
-              </li>
-              <li class="nav-item">
-                <!-- Add and remove class active-->
-                <a class="nav-link" id="events-tab" data-toggle="tab" href="#events" role="tab" aria-controls="events" aria-selected="false">Événements</a>
-              </li>
-            </ul>
+              <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item">
+                  <!-- Add and remove class active-->
+                  <a class="nav-link active" id="candidats-tab" data-toggle="tab" href="#candidats" role="tab" aria-controls="candidats" aria-selected="true">Candidats</a>
+                </li>
+                <li class="nav-item">
+                  <!-- Add and remove class active-->
+                  <a class="nav-link" id="queries-tab" data-toggle="tab" href="#queries" role="tab" aria-controls="queries" aria-selected="false">Queries</a>
+                </li>
+                <li class="nav-item">
+                  <!-- Add and remove class active-->
+                  <a class="nav-link" id="events-tab" data-toggle="tab" href="#events" role="tab" aria-controls="events" aria-selected="false">Événements</a>
+                </li>
+              </ul>
 
-            <div class="tab-content max-height-tab" id="myTabContent">
-              <!-- Add and remove class active show -->
-              <div class="tab-pane fade scrollable active show" id="candidats" role="tabpanel" aria-labelledby="candidats-tab">
-                <form>
-                  <div class="form-check">
-                    <label class="form-check-label">
-                      <input class="form-check-input" type="checkbox" name="option" value="all">
-                      <span class="badge">Tout cocher</span>
-                    </label>
-                  </div>
-                  <hr>
-                  <label class="control-label">Sources</label>
-                  <div class="form-check">
-                    <label for="google" class="form-check-label">
-                      <input id="google" class="form-check-input" name="option" type="checkbox" value="google">
-                      <img src="assets/svg/google.svg" class="img-fluid" alt="Logotype Google" width="15" height="15">
-                      <span class="badge">Google Trends</span>
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <label for="twitter" class="form-check-label">
-                      <input id="twitter" class="form-check-input" name="option" type="checkbox" value="twitter">
-                      <img src="assets/svg/twitter.svg" class="img-fluid" alt="Logotype Twitter" width="15" height="15">
-                      <span class="badge">Twitter</span>
-                    </label>
-                  </div>
-                  <hr>
-                  <label class="control-label">Candidats</label>
-                  <div class="form-check">
-                    <label for="hamon" class="form-check-label">
-                      <input id="hamon" class="form-check-input" name="option" type="checkbox" value="hamon">
-                      <img src="assets/img/candidats/hamon.jpg" class="img-fluid" alt="Benoît Hamon" width="25" height="25">
-                      <span class="badge" style="background-color:#FA58AC;color:#fff;">Benoît Hamon</span>
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <label for="macron" class="form-check-label">
-                      <input id="macron" class="form-check-input" name="option" type="checkbox" value="macron">
-                      <img src="assets/img/candidats/macron.jpg" class="img-fluid" alt="Emmanuel Macron" width="25" height="25">
-                      <span class="badge" style="background-color:#642EFE;color:#fff;">Emmanuel Macron</span>
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <label for="asselineau" class="form-check-label">
-                      <input id="asselineau" class="form-check-input" name="option" type="checkbox" value="asselineau">
-                      <img src="assets/img/candidats/asselineau.jpg" class="img-fluid" alt="François Asselineau" width="25" height="25">
-                      <span class="badge">François Asselineau</span>
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <label for="fillon" class="form-check-label">
-                      <input id="fillon" class="form-check-input" name="option" type="checkbox" value="fillon">
-                      <img src="assets/img/candidats/fillon.jpg" class="img-fluid" alt="François Fillon" width="25" height="25">
-                      <span class="badge">François Fillon</span>
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <label for="cheminade" class="form-check-label">
-                      <input id="cheminade" class="form-check-input" name="option" type="checkbox" value="cheminade">
-                      <img src="assets/img/candidats/cheminade.jpg" class="img-fluid" alt="Jacques Cheminade" width="25" height="25">
-                      <span class="badge">Jacques Cheminade</span>
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <label for="lassalle" class="form-check-label">
-                      <input id="lassalle" class="form-check-input" name="option" type="checkbox" value="lassalle">
-                      <img src="assets/img/candidats/lassalle.jpg" class="img-fluid" alt="Jean Lassalle" width="25" height="25">
-                      <span class="badge">Jean Lassalle</span>
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <label for="melenchon" class="form-check-label">
-                      <input id="melenchon" class="form-check-input" name="option" type="checkbox" value="melenchon">
-                      <img src="assets/img/candidats/melenchon.jpg" class="img-fluid" alt="Jean-luc Mélenchon" width="25" height="25">
-                      <span class="badge">Jean-luc Mélenchon</span>
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <label for="lepen" class="form-check-label">
-                      <input id="lepen" class="form-check-input" name="option" type="checkbox" value="lepen">
-                      <img src="assets/img/candidats/lepen.jpg" class="img-fluid" alt="Marine Le Pen" width="25" height="25">
-                      <span class="badge">Marine Le Pen</span>
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <label for="arthaud" class="form-check-label">
-                      <input id="arthaud" class="form-check-input" name="option" type="checkbox" value="arthaud">
-                      <img src="assets/img/candidats/arthaud.jpg" class="img-fluid" alt="Nathalie Arthaud" width="25" height="25">
-                      <span class="badge">Nathalie Arthaud</span>
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <label class="form-check-label">
-                      <input class="form-check-input" type="checkbox" name="option" value="dupont-aignan">
-                      <img src="assets/img/candidats/dupont-aignan.jpg" class="img-fluid" alt="Nicolas Dupont-Aignan" width="25" height="25">
-                      <span class="badge">Nicolas Dupont-Aignan</span>
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <label for="poutou" class="form-check-label">
-                      <input id="poutou" class="form-check-input" name="option" type="checkbox" value="poutou">
-                      <img src="assets/img/candidats/poutou.jpg" class="img-fluid" alt="Philippe Poutou" width="25" height="25">
-                      <span class="badge">Philippe Poutou</span>
-                    </label>
-                  </div>
-                  <hr>
-                  <label class="control-label">Médias</label>
-                  <div class="form-check">
-                    <label for="youtube" class="form-check-label">
-                      <input id="youtube" class="form-check-input" name="option" type="checkbox" value="youtube">
-                      <span class="badge badge-legend">Youtube
-                        <small><svg xmlns="http://www.w3.org/2000/svg" width="31.925" height="2.142" viewBox="0 0 31.925 2.142"><circle cx="1.071" cy="1.071" r="1.071"/><circle cx="7.028" cy="1.071" r="1.071"/><circle cx="12.984" cy="1.071" r="1.071"/><circle cx="18.941" cy="1.071" r="1.071"/><circle cx="24.898" cy="1.071" r="1.071"/><circle cx="30.854" cy="1.071" r="1.071"/></svg></small>
-                      </span>
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <label for="news" class="form-check-label">
-                      <input id="news" class="form-check-input" name="option" type="checkbox" value="news">
-                      <span class="badge badge-legend">News
-                        <small><svg xmlns="http://www.w3.org/2000/svg" width="32" height="1.659" viewBox="0 0 32 1.659"><path d="M0 0h6v1.66H0zM12.667 0h6.667v1.66h-6.667zM26 0h6v1.66h-6z"/></svg></small>
-                      </span>
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <label for="web" class="form-check-label">
-                      <input id="web" class="form-check-input" name="option" type="checkbox" value="web">
-                      <span class="badge badge-legend">Web
-                        <small><svg xmlns="http://www.w3.org/2000/svg" width="32" height="1.659" viewBox="0 0 32 1.659"><path d="M0 0h32v1.66H0z"/></svg></small>
-                      </span>
-                    </label>
-                  </div>
-                  <hr>
-                  <div class="form-check">
-                    <label for="adjust" class="form-check-label">
-                      <input id="adjust" class="form-check-input" name="option" type="checkbox" value="adjust">
-                      <span class="badge">Ajuster chaque candidat</span>
-                    </label>
-                  </div>
-                </form>
+              <div class="tab-content max-height-tab" id="myTabContent">
+                <!-- Add and remove class active show -->
+                <div class="tab-pane fade scrollable active show" id="candidats" role="tabpanel" aria-labelledby="candidats-tab">
+                  <form>
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" name="option" value="all">
+                        <span class="badge">Tout cocher</span>
+                      </label>
+                    </div>
+                    <hr>
+                    <label class="control-label">Sources</label>
+                    <div class="form-check">
+                      <label for="google" class="form-check-label">
+                        <input id="google" class="form-check-input" name="option" type="checkbox" value="google">
+                        <img src="assets/svg/google.svg" class="img-fluid" alt="Logotype Google" width="15" height="15">
+                        <span class="badge">Google Trends</span>
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <label for="twitter" class="form-check-label">
+                        <input id="twitter" class="form-check-input" name="option" type="checkbox" value="twitter">
+                        <img src="assets/svg/twitter.svg" class="img-fluid" alt="Logotype Twitter" width="15" height="15">
+                        <span class="badge">Twitter</span>
+                      </label>
+                    </div>
+                    <hr>
+                    <label class="control-label">Candidats</label>
+                    <div class="form-check">
+                      <label for="hamon" class="form-check-label">
+                        <input id="hamon" class="form-check-input" name="option" type="checkbox" value="hamon">
+                        <img src="assets/img/candidats/hamon.jpg" class="img-fluid" alt="Benoît Hamon" width="25" height="25">
+                        <span class="badge" style="background-color:#FA58AC;color:#fff;">Benoît Hamon</span>
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <label for="macron" class="form-check-label">
+                        <input id="macron" class="form-check-input" name="option" type="checkbox" value="macron">
+                        <img src="assets/img/candidats/macron.jpg" class="img-fluid" alt="Emmanuel Macron" width="25" height="25">
+                        <span class="badge" style="background-color:#642EFE;color:#fff;">Emmanuel Macron</span>
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <label for="asselineau" class="form-check-label">
+                        <input id="asselineau" class="form-check-input" name="option" type="checkbox" value="asselineau">
+                        <img src="assets/img/candidats/asselineau.jpg" class="img-fluid" alt="François Asselineau" width="25" height="25">
+                        <span class="badge">François Asselineau</span>
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <label for="fillon" class="form-check-label">
+                        <input id="fillon" class="form-check-input" name="option" type="checkbox" value="fillon">
+                        <img src="assets/img/candidats/fillon.jpg" class="img-fluid" alt="François Fillon" width="25" height="25">
+                        <span class="badge">François Fillon</span>
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <label for="cheminade" class="form-check-label">
+                        <input id="cheminade" class="form-check-input" name="option" type="checkbox" value="cheminade">
+                        <img src="assets/img/candidats/cheminade.jpg" class="img-fluid" alt="Jacques Cheminade" width="25" height="25">
+                        <span class="badge">Jacques Cheminade</span>
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <label for="lassalle" class="form-check-label">
+                        <input id="lassalle" class="form-check-input" name="option" type="checkbox" value="lassalle">
+                        <img src="assets/img/candidats/lassalle.jpg" class="img-fluid" alt="Jean Lassalle" width="25" height="25">
+                        <span class="badge">Jean Lassalle</span>
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <label for="melenchon" class="form-check-label">
+                        <input id="melenchon" class="form-check-input" name="option" type="checkbox" value="melenchon">
+                        <img src="assets/img/candidats/melenchon.jpg" class="img-fluid" alt="Jean-luc Mélenchon" width="25" height="25">
+                        <span class="badge">Jean-luc Mélenchon</span>
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <label for="lepen" class="form-check-label">
+                        <input id="lepen" class="form-check-input" name="option" type="checkbox" value="lepen">
+                        <img src="assets/img/candidats/lepen.jpg" class="img-fluid" alt="Marine Le Pen" width="25" height="25">
+                        <span class="badge">Marine Le Pen</span>
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <label for="arthaud" class="form-check-label">
+                        <input id="arthaud" class="form-check-input" name="option" type="checkbox" value="arthaud">
+                        <img src="assets/img/candidats/arthaud.jpg" class="img-fluid" alt="Nathalie Arthaud" width="25" height="25">
+                        <span class="badge">Nathalie Arthaud</span>
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" name="option" value="dupont-aignan">
+                        <img src="assets/img/candidats/dupont-aignan.jpg" class="img-fluid" alt="Nicolas Dupont-Aignan" width="25" height="25">
+                        <span class="badge">Nicolas Dupont-Aignan</span>
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <label for="poutou" class="form-check-label">
+                        <input id="poutou" class="form-check-input" name="option" type="checkbox" value="poutou">
+                        <img src="assets/img/candidats/poutou.jpg" class="img-fluid" alt="Philippe Poutou" width="25" height="25">
+                        <span class="badge">Philippe Poutou</span>
+                      </label>
+                    </div>
+                    <hr>
+                    <label class="control-label">Médias</label>
+                    <div class="form-check">
+                      <label for="youtube" class="form-check-label">
+                        <input id="youtube" class="form-check-input" name="option" type="checkbox" value="youtube">
+                        <span class="badge badge-legend">Youtube
+                          <small><svg xmlns="http://www.w3.org/2000/svg" width="31.925" height="2.142" viewBox="0 0 31.925 2.142"><circle cx="1.071" cy="1.071" r="1.071"/><circle cx="7.028" cy="1.071" r="1.071"/><circle cx="12.984" cy="1.071" r="1.071"/><circle cx="18.941" cy="1.071" r="1.071"/><circle cx="24.898" cy="1.071" r="1.071"/><circle cx="30.854" cy="1.071" r="1.071"/></svg></small>
+                        </span>
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <label for="news" class="form-check-label">
+                        <input id="news" class="form-check-input" name="option" type="checkbox" value="news">
+                        <span class="badge badge-legend">News
+                          <small><svg xmlns="http://www.w3.org/2000/svg" width="32" height="1.659" viewBox="0 0 32 1.659"><path d="M0 0h6v1.66H0zM12.667 0h6.667v1.66h-6.667zM26 0h6v1.66h-6z"/></svg></small>
+                        </span>
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <label for="web" class="form-check-label">
+                        <input id="web" class="form-check-input" name="option" type="checkbox" value="web">
+                        <span class="badge badge-legend">Web
+                          <small><svg xmlns="http://www.w3.org/2000/svg" width="32" height="1.659" viewBox="0 0 32 1.659"><path d="M0 0h32v1.66H0z"/></svg></small>
+                        </span>
+                      </label>
+                    </div>
+                    <hr>
+                    <div class="form-check">
+                      <label for="adjust" class="form-check-label">
+                        <input id="adjust" class="form-check-input" name="option" type="checkbox" value="adjust">
+                        <span class="badge">Ajuster chaque candidat</span>
+                      </label>
+                    </div>
+                  </form>
+                </div>
+                <!-- Add and remove class active show-->
+                <div class="tab-pane fade scrollable" id="queries" role="tabpanel" aria-labelledby="queries-tab">
+                  <form>
+                    <div class="form-group">
+                      <label class="col-form-label sr-only" for="searchQueries">Effectuer une recherche</label>
+                      <input type="search" class="form-control" id="searchQueries" placeholder="rechercher">
+                    </div>
+                    <p>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte.<p>
+                  </form>
+                </div>
+                <!-- Add and remove class active show-->
+                <div class="tab-pane fade scrollable" id="events" role="tabpanel" aria-labelledby="events-tab">
+                  <form>
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                        <span><span class="date">12/01/2017</span>Option one is this and that&mdash;be sure to include why it's great</span>
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                        <span><span class="date">12/01/2017</span>Option two can be something else and selecting it will deselect option one</span>
+                      </label>
+                    </div>
+                  </form>
+                </div>
               </div>
-              <!-- Add and remove class active show-->
-              <div class="tab-pane fade scrollable" id="queries" role="tabpanel" aria-labelledby="queries-tab">
-                <form>
-                  <div class="form-group">
-                    <label class="col-form-label sr-only" for="searchQueries">Effectuer une recherche</label>
-                    <input type="search" class="form-control" id="searchQueries" placeholder="rechercher">
-                  </div>
-                  <p>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte.<p>
-                </form>
-              </div>
-              <!-- Add and remove class active show-->
-              <div class="tab-pane fade scrollable" id="events" role="tabpanel" aria-labelledby="events-tab">
-                <form>
-                  <div class="form-check">
-                    <label class="form-check-label">
-                      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-                      <span><span class="date">12/01/2017</span>Option one is this and that&mdash;be sure to include why it's great</span>
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <label class="form-check-label">
-                      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-                      <span><span class="date">12/01/2017</span>Option two can be something else and selecting it will deselect option one</span>
-                    </label>
-                  </div>
-                </form>
+            </aside>
+            <div class="container-content col-sm-8 col-md-9">
+              <h1>Titre</h1>
+              <div class="container-viz">
+                <div class="popover" role="tooltip">
+                  <h3 class="popover-header">Titre event</h3>
+                  <div class="popover-body">Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte.</div>
+                </div>
               </div>
             </div>
-          </aside>
-          <div class="container-content col-sm-8 col-md-9">
-            <h1>Titre</h1>
-            <div class="container-viz">
-              <div class="popover" role="tooltip">
-                <h3 class="popover-header">Titre event</h3>
-                <div class="popover-body">Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte.</div>
-              </div>
-            </div>
-          </div>
-        </div><!--/row-->
-      </main><!--/.container-->
+          </div><!--/row-->
+        </main><!--/.container-->
+      </div>
       <script type="text/javascript" src="./build/bundle.js"></script>
     </body>
 </html>

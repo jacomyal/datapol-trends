@@ -5,7 +5,7 @@
 // Nav Tabs
 // —————————————————————————————————————
 .nav-tabs {
-  @include justify-content(space-between);
+  @include justify-content(start);
   .nav-link {
     padding: 1em 0.5rem;
     border-top: 0;
