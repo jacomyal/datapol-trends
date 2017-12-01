@@ -45,17 +45,19 @@ export default new Baobab({
         allQueries: ['data', 'allQueries'],
         candidates: ['nav', 'candidates'],
         categories: ['nav', 'categories'],
+        querySearch: ['nav', 'querySearch'],
         event: ['nav', 'event'],
       },
       get(data) {
-        const { candidates, categories, event } = data;
+        const { candidates, categories, querySearch, event } = data;
 
         return (
           _(data.allQueries)
-            .pickBy(o => (
+            .pickBy((o, query) => (
               o.candidates.some(str => candidates[str])
               && o.categories.some(str => categories[str])
               && (!event || o.events.includes(event))
+              && (!querySearch || query.indexOf(querySearch) >= 0)
             ))
             .map((o, query) => ({
               ...o,

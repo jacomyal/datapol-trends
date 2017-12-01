@@ -162,8 +162,8 @@ const TABS = [
               type="search"
               className="form-control"
               id="searchQueries"
-              placeholder="rechercher"
-              value={ props.querySearch || undefined }
+              placeholder="Rechercher dans les requêtes"
+              value={ props.querySearch || '' }
               onChange={
                 e => props.dispatch(
                   searchQueries,
@@ -175,7 +175,12 @@ const TABS = [
           <hr />
           {
             props.highlightedQueries.length ?
-              <label className="control-label">Requêtes sélectionnées</label> :
+              <label className="control-label">{
+                props.highlightedQueries.length > 1 ?
+                  props.highlightedQueries.length + ' requêtes sélectionnées' :
+                  'Une requête sélectionnée'
+              }
+              </label> :
               undefined
           }
           {
@@ -216,7 +221,7 @@ const TABS = [
           {
             queries.length ?
               <label className="control-label">
-                { queries.length } Requête{ queries.length > 1 ? 's' : null }
+                { queries.length } requête{ queries.length > 1 ? 's' : null }
               </label> :
               <label className="control-label">
                 Aucune requête dans les filtres actifs
