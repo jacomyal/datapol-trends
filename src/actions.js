@@ -20,7 +20,14 @@ export function selectEvent(state, { event }) {
   return state;
 };
 
+export function showQuery(state, { query }) {
+  // TODO
+  return state;
+};
+
 export default {
   setOption,
   toggleSelection,
+  selectEvent,
+  showQuery,
 };

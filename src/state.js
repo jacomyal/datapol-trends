@@ -23,7 +23,7 @@ export default new Baobab({
       .keyBy('id')
       .mapValues(() => true)
       .value(),
-    topics: _(config.topics)
+    categories: _(config.categories)
       .keyBy('id')
       .mapValues(() => true)
       .value(),
@@ -42,19 +42,23 @@ export default new Baobab({
       cursors: {
         allQueries: ['data', 'allQueries'],
         candidates: ['nav', 'candidates'],
-        topics: ['nav', 'topics'],
+        categories: ['nav', 'categories'],
         event: ['nav', 'event'],
       },
       get(data) {
-        const { candidates, topics, event } = data;
-        return _.filter(
-          data.allQueries,
-          query => (
-            query.candidates.some(str => candidates[str])
-            && query.topics.some(str => topics[str])
-            && (!event || query.events.includes(event))
-          )
-        )
+        const { candidates, categories, event } = data;
+        return (
+          _(data.allQueries)
+            .pickBy(o => (
+              o.candidates.some(str => candidates[str])
+              && o.categories.some(str => categories[str])
+              && (!event || o.events.includes(event))
+            ))
+            .map((o, query) => ({
+              ...o,
+              id: query,
+            }))
+        );
       },
     }),
 

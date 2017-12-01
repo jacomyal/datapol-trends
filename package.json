@@ -25,6 +25,7 @@
   "dependencies": {
     "baobab": "^2.5.0",
     "baobab-react": "^3.0.0",
+    "classnames": "^2.2.5",
     "lodash": "^4.17.4",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
