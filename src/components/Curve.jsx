@@ -13,52 +13,92 @@ const AXIS_STYLE = {
   },
 };
 
+function Candidates(props) {
+  return (
+    props.curves.length ?
+      <VictoryChart
+        width={ props.size.width }
+        height={ 600 }
+      >
+        <VictoryAxis
+          tickFormat={
+            x => new Date(x).toISOString().substr(0, 10)
+          }
+          style={ AXIS_STYLE }
+        />
+        <VictoryAxis
+          dependentAxis
+          style={ AXIS_STYLE }
+        />
+        {
+          props.curves.map(o => (
+            <VictoryLine
+              key={ o.candidate }
+              data={ o.data }
+              style={{
+                data: {
+                  ...o.style,
+                  stroke: o.color,
+                  strokeWidth: 1,
+                },
+              }}
+            />
+          ))
+        }
+      </VictoryChart> :
+      <div>Aucune courbe à afficher</div>
+  );
+}
+
+function Queries(props) {
+  return (
+    props.curves.length ?
+      <VictoryChart
+        width={ props.size.width }
+        height={ 600 }
+      >
+        <VictoryAxis
+          tickFormat={
+            x => new Date(x).toISOString().substr(0, 10)
+          }
+          style={ AXIS_STYLE }
+        />
+        <VictoryAxis
+          dependentAxis
+          style={ AXIS_STYLE }
+        />
+        {
+          props.curves.map(o => (
+            <VictoryLine
+              key={ o.candidate }
+              data={ o.data }
+              style={{
+                data: {
+                  ...o.style,
+                  stroke: o.color,
+                  strokeWidth: 1,
+                },
+              }}
+            />
+          ))
+        }
+      </VictoryChart> :
+      <div>Aucune courbe à afficher</div>
+  );
+}
+
 export default sizeMe()(branch(
   {
     curves: ['data', 'curves'],
   },
   class Curve extends Component {
     render() {
-      const { curves, size } = this.props;
-
       return (
-        <div className="container-content col-sm-9">
+        <div className="container-content scrollable col-sm-9">
           <h1>Chronologie de la campagne</h1>
           <div className="container-viz">
-            {
-              curves.length ?
-                <VictoryChart
-                  width={ size.width }
-                  height={ 600 }
-                >
-                  <VictoryAxis
-                    tickFormat={
-                      x => new Date(x).toISOString().substr(0, 10)
-                    }
-                    style={ AXIS_STYLE }
-                  />
-                  <VictoryAxis
-                    dependentAxis
-                    style={ AXIS_STYLE }
-                  />
-                  {
-                    curves.map(o => (
-                      <VictoryLine
-                        key={ o.source + '-' + o.candidate }
-                        data={ o.data }
-                        style={{
-                          data: {
-                            ...o.style,
-                            stroke: o.color,
-                            strokeWidth: 1,
-                          },
-                        }}
-                      />
-                    ))
-                  }
-                </VictoryChart> :
-                <div>Aucune courbe à afficher</div>
-            }
+            <Candidates { ...this.props } />
+            <Queries { ...this.props } />
           </div>
         </div>
       );

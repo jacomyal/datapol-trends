@@ -91,51 +91,6 @@ const TABS = [
               </div>
             ))
           }
-          <hr />
-          <label className="control-label">Sources</label>
-          {
-            props.sources.map(source => (
-              <div
-                key={ 'source-' + source.id }
-                className="form-check"
-              >
-                <label
-                  htmlFor={ 'source-' + source.id }
-                  className="form-check-label"
-                >
-                  <input
-                    id={ 'source-' + source.id }
-                    className="form-check-input"
-                    name="option"
-                    type="checkbox"
-                    checked={ props.sourcesOn[source.id] }
-                    onChange={
-                      e => props.dispatch(
-                        toggleSelection,
-                        { type: 'sources', value: source.id }
-                      )
-                    }
-                  />
-                  <span className="badge badge-legend">
-                    { source.label }
-                    <small>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="32"
-                        height="1.659"
-                        viewBox="0 0 32 1.659"
-                      >
-                        <path
-                          d="M0 0h32v1.66H0z"
-                          style={ source.style }
-                        />
-                      </svg>
-                    </small>
-                  </span>
-                </label>
-              </div>
-            ))
-          }
         </form>
       );
     },
@@ -315,7 +270,6 @@ export default branch(
   {
     candidates: ['data', 'config', 'candidates'],
     categories: ['data', 'config', 'categories'],
-    sources: ['data', 'config', 'sources'],
     events: ['data', 'config', 'events'],
     queries: ['data', 'queries'],
 
@@ -324,7 +278,6 @@ export default branch(
     candidatesOn: ['nav', 'candidates'],
     categoriesOn: ['nav', 'categories'],
     querySearch: ['nav', 'querySearch'],
-    sourcesOn: ['nav', 'sources'],
     event: ['nav', 'event'],
   },
   class Form extends Component {

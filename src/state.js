@@ -1,14 +1,7 @@
 import _ from 'lodash';
 import Baobab, { monkey } from 'baobab';
 
-const timeSeries = {
-  sources: {
-    news: require('../assets/data/timeseries_candidates_news.json'),
-    web: require('../assets/data/timeseries_candidates_web.json'),
-    youtube: require('../assets/data/timeseries_candidates_youtube.json'),
-  },
-};
-
+const timeSeries = require('../assets/data/timeseries_candidates_web.json');
 const allQueries = require('../assets/data/queries_all.json');
 
 const config = require('../assets/config.json');
@@ -16,10 +9,6 @@ const config = require('../assets/config.json');
 export default new Baobab({
   nav: {
     querySearch: undefined,
-    sources: _(config.sources)
-      .keyBy('id')
-      .mapValues(() => true)
-      .value(),
     candidates: _(config.candidates)
       .keyBy('id')
       .mapValues(() => true)
@@ -73,37 +62,26 @@ export default new Baobab({
       cursors: {
         timeSeries: ['data', 'timeSeries'],
         candidates: ['data', 'config', 'candidates'],
-        sources: ['data', 'config', 'sources'],
         candidatesOn: ['nav', 'candidates'],
-        sourcesOn: ['nav', 'sources'],
       },
       get(data) {
         const curves = [];
-        const sources = data.candidates.filter(
-          ({ id }) => data.candidatesOn[id]
-        );
 
         data.candidates
           .filter(({ id }) => data.candidatesOn[id])
-          .forEach(candidate =>
-            data.sources
-              .filter(({ id }) => data.sourcesOn[id])
-              .forEach(source => {
-                curves.push({
-                  candidate: candidate.id,
-                  source: source.id,
-                  color: candidate.color,
-                  style: source.style,
-                  data: _.map(
-                    data.timeSeries.sources[source.id][candidate.id],
-                    ({ value }, d) => ({
-                      x: new Date(d),
-                      y: value,
-                    }),
-                  )
-                })
-              })
-          );
+          .forEach(candidate => {
+            curves.push({
+              candidate: candidate.id,
+              color: candidate.color,
+              data: _.map(
+                data.timeSeries[candidate.id],
+                ({ value }, d) => ({
+                  x: new Date(d),
+                  y: value,
+                }),
+              )
+            })
+          });
 
         return curves;
       },
