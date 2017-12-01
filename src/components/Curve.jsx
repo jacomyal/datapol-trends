@@ -20,6 +20,9 @@ function Curves({ size, curves, title }) {
       <VictoryChart
         width={ size.width }
         height={ 600 }
+        domain={{
+          x: [new Date('2016-11-01'), new Date('2017-07-01')],
+        }}
       >
         <VictoryAxis
           tickFormat={
