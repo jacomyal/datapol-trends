@@ -20,9 +20,15 @@
 
   form {
     padding: 1rem 0;
+
     /* Landscape tablets and medium desktops */
-    @media (min-width: 992px) and (max-width: 1199px) {
+    @media (max-width: 1199px) {
       font-size: 0.9em;
+    }
+
+    /* Landscape phones and portrait tablets */
+    @media (max-width: 991px) {
+      height: calc(100% - 4.8em);
     }
   }
 }

@@ -5,6 +5,10 @@
 
   &-input {
     margin-top: 0.3em;
+    /* Landscape tablets and medium desktops */
+    @media (min-width: 992px) and (max-width: 1199px) {
+      margin-top: 0.25em;
+    }
   }
 
   // Form Check Label
@@ -27,6 +31,10 @@
 
       border-radius: 50%;
       opacity: 0.1;
+      /* Landscape phones and portrait tablets */
+      @media (max-width: 991px) {
+        display: none;
+      }
     }
 
     input[type=checkbox]:checked {
@@ -48,6 +56,8 @@
       position: relative;
       font-size: 0.9em;
       font-weight: normal;
+      white-space: normal;
+      text-align: left;
       border-radius: 0;
 
       // Badge Legend
@@ -72,6 +82,10 @@
       display: block;
       font-weight: 700;
       padding-top: 0.2em;
+      /* Landscape tablets and medium desktops */
+      @media (max-width: 1199px) {
+        padding-top: 0;
+      }
     }
   }
 }

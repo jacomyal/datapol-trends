@@ -10,7 +10,7 @@
     padding: 1em 0.5rem;
     border-top: 0;
     /* Landscape tablets and medium desktops */
-    @media (min-width: 992px) and (max-width: 1199px) {
+    @media (max-width: 1199px) {
       font-size: 0.7em;
     }
   }
