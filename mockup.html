@@ -12,19 +12,18 @@
     </head>
     <body>
       <header>
-        <nav class="navbar">
+        <nav class="navbar navbar-fixed-top">
           <a class="navbar-brand" href="/">
             <img src="assets/img/logotype-datapol.png" class="img-fluid" alt="Logotype datapol" width="30" height="30">
-            <span></span>
           </a>
         </nav>
       </header>
-      <main role="main" class="container-fluid">
-        <div class="row">
-          <aside class="col-sm-3">
-            <div class="card">
+      <main role="main" class="container-fluid max-height-base no-overflow">
+        <div class="row max-height">
+          <aside class="col-sm-3 max-height">
+            <div class="card max-height">
               <h4 class="card-header">Options</h4>
-              <div class="card-body">
+              <div class="card-body scrollable">
                 <form>
                   <div class="form-check">
                     <label class="form-check-label">
@@ -33,6 +32,23 @@
                     </label>
                   </div>
                   <hr>
+                  <label class="control-label">Sources</label>
+                  <div class="form-check">
+                    <label for="google" class="form-check-label">
+                      <input id="google" class="form-check-input" name="option" type="checkbox" value="google">
+                      <img src="assets/svg/google.svg" class="img-fluid" alt="Logotype Google" width="15" height="15">
+                      <span class="badge">Google Trends</span>
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <label for="twitter" class="form-check-label">
+                      <input id="google" class="form-check-input" name="option" type="checkbox" value="twitter">
+                      <img src="assets/svg/twitter.svg" class="img-fluid" alt="Logotype Twitter" width="15" height="15">
+                      <span class="badge">Twitter</span>
+                    </label>
+                  </div>
+                  <hr>
+                  <label class="control-label">Candidats</label>
                   <div class="form-check">
                     <label for="hamon" class="form-check-label">
                       <input id="hamon" class="form-check-input" name="option" type="checkbox" value="hamon">
@@ -111,6 +127,7 @@
                     </label>
                   </div>
                   <hr>
+                  <label class="control-label">Médias</label>
                   <div class="form-check">
                     <label for="youtube" class="form-check-label">
                       <input id="youtube" class="form-check-input" name="option" type="checkbox" value="youtube">
