@@ -7,7 +7,7 @@
   "scripts": {
     "mockups": "kotatsu serve styles/kickstart.js --public . --port 3001 --index ./mockup.html",
     "start": "kotatsu serve src/index.js --public . --presets stage-2,react,react-hmre --index ./index.html",
-    "build": "kotatsu build client src/index.js --minify --es2015 --no-source-maps --presets stage-2,react,react-hmre --index ./index.html --output build/bundle.js",
+    "build": "kotatsu build client src/index.js --minify --es2015 --no-source-maps --presets stage-2,react --index ./index.html --output build/bundle.js",
     "data": "babel-node --presets stage-2 scripts/buildJSON.js"
   },
   "devDependencies": {
