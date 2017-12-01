@@ -14,6 +14,7 @@ html, body {
   height: 100%;
   overflow: hidden;
 }
+
 body {
   > div {
     &:first-child {
@@ -22,6 +23,7 @@ body {
     }
   }
 }
+
 .scrollable {
   height: 100%;
   overflow: auto;
@@ -36,11 +38,14 @@ body {
   overflow: hidden;
 }
 
+.no-padding-left {
+  /* Portrait phones and smaller */
+  @media (min-width: 480px) {
+    padding-left: 0;
+  }
+}
+
 hr {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
-}
-
-.no-padding-left {
-  padding-left: 0;
 }
