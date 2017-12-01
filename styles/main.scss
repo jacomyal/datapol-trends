@@ -14,23 +14,26 @@ html, body {
   height: 100%;
   overflow: hidden;
 }
+
 .scrollable {
   height: 100%;
   overflow: auto;
 }
-.max-height-base {
-  height: 100%;
-}
+
+.max-height-base,
 .max-height {
   height: 100%;
 }
+
 .no-overflow {
   overflow: hidden;
 }
+
 hr {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 }
+
 .no-padding-left {
   padding-left: 0;
 }

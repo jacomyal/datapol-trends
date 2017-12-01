@@ -18,7 +18,7 @@
             <ul class="nav nav-tabs" id="myTab" role="tablist">
               <li class="nav-item">
                 <!-- Add and remove class active-->
-                <a class="nav-link" id="candidats-tab" data-toggle="tab" href="#candidats" role="tab" aria-controls="candidats" aria-selected="true">Candidats</a>
+                <a class="nav-link active" id="candidats-tab" data-toggle="tab" href="#candidats" role="tab" aria-controls="candidats" aria-selected="true">Candidats</a>
               </li>
               <li class="nav-item">
                 <!-- Add and remove class active-->
@@ -26,13 +26,13 @@
               </li>
               <li class="nav-item">
                 <!-- Add and remove class active-->
-                <a class="nav-link active" id="events-tab" data-toggle="tab" href="#events" role="tab" aria-controls="events" aria-selected="false">Événements</a>
+                <a class="nav-link" id="events-tab" data-toggle="tab" href="#events" role="tab" aria-controls="events" aria-selected="false">Événements</a>
               </li>
             </ul>
 
             <div class="tab-content max-height-tab" id="myTabContent">
-              <!-- Add and remove class active show-->
-              <div class="tab-pane fade scrollable" id="candidats" role="tabpanel" aria-labelledby="candidats-tab">
+              <!-- Add and remove class active show -->
+              <div class="tab-pane fade scrollable active show" id="candidats" role="tabpanel" aria-labelledby="candidats-tab">
                 <form>
                   <div class="form-check">
                     <label class="form-check-label">
@@ -181,7 +181,7 @@
                 </form>
               </div>
               <!-- Add and remove class active show-->
-              <div class="tab-pane fade active show" id="events" role="tabpanel" aria-labelledby="events-tab">
+              <div class="tab-pane fade scrollable" id="events" role="tabpanel" aria-labelledby="events-tab">
                 <form>
                   <div class="form-check">
                     <label class="form-check-label">

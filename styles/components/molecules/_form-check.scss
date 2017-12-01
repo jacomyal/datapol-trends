@@ -2,9 +2,11 @@
 // Components Molecules Form Check Label
 // —————————————————————————————————————
 .form-check {
+
   &-input {
-        margin-top: 0.35rem;
+    margin-top: 0.3em;
   }
+
   // Form Check Label
   // —————————————————————————————————————
   &-label {
@@ -40,16 +42,11 @@
       }
     }
 
-    .date {
-      display: block;
-      font-weight: 700;
-      padding-top: 0.3em;
-    }
-
     // Badge
     // —————————————————————————————————————
     .badge {
       position: relative;
+      font-size: 0.9em;
       font-weight: normal;
       border-radius: 0;
 
@@ -67,6 +64,14 @@
           opacity: 0.8;
         }
       }
+    }
+
+    // Date
+    // —————————————————————————————————————
+    .date {
+      display: block;
+      font-weight: 700;
+      padding-top: 0.3em;
     }
   }
 }

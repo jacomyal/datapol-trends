@@ -1,15 +1,13 @@
 //
-// Components Organism NavBar
+// Components Organism Nav
 // —————————————————————————————————————
-.navbar {
-  padding: 0;
-}
-.nav-link {
-  padding: 0.5rem;
-}
+
+// Nav Tabs
+// —————————————————————————————————————
 .nav-tabs {
-  @include justify-content(start);
+  @include justify-content(space-between);
   .nav-link {
+    padding: 1em 0.5rem;
     border-top: 0;
   }
 }
