@@ -1,3 +1,4 @@
+import sizeMe from 'react-sizeme';
 import React, { Component } from 'react';
 import { branch } from 'baobab-react/higher-order';
 import { VictoryChart, VictoryAxis, VictoryLine } from 'victory';
@@ -7,19 +8,18 @@ const AXIS_STYLE = {
     stroke: '#333'
   },
   tickLabels: {
-    fontSize: 8,
     padding: 4,
     fill: '#333',
   },
 };
 
-export default branch(
+export default sizeMe()(branch(
   {
     curves: ['data', 'curves'],
   },
   class Curve extends Component {
     render() {
-      const { curves } = this.props;
+      const { curves, size } = this.props;
 
       return (
         <div className="container-content col-sm-9">
@@ -28,6 +28,8 @@ export default branch(
             {
               curves.length ?
                 <VictoryChart
+                  width={ size.width }
+                  height={ 600 }
                 >
                   <VictoryAxis
                     tickFormat={
@@ -62,4 +64,4 @@ export default branch(
       );
     }
   }
-);
+));

@@ -28,6 +28,7 @@
     "lodash": "^4.17.4",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "react-sizeme": "^2.3.6",
     "victory": "^0.24.2"
   }
 }
