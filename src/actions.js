@@ -62,7 +62,7 @@ export function toggleQuery(state, { query }) {
       })
   );
   if (!queryData) {
-    ajax("assets/data/" + query + ".json")
+    ajax("assets/data/queries/" + query + ".json")
     .done(queryData => state.set(['data', 'querySeries', query], queryData));
   }
   return state;
