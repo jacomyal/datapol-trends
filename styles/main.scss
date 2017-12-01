@@ -7,8 +7,27 @@
 @import "mixins";
 
 @import "components";
+
 // Generic
 // —————————————————————————————————————
+html, body {
+    height: 100%;
+                overflow: hidden;
+}
+.scrollable {
+  height: 100%;
+  overflow: auto;
+}
+.max-height-base {
+  height: calc(100% - 80px);
+}
+.max-height {
+  height: 100%;
+}
+
+.no-overflow {
+  overflow: hidden;
+}
 hr {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
