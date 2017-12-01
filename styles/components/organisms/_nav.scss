@@ -4,3 +4,13 @@
 .navbar {
   padding: 0;
 }
+.nav-link {
+  padding: 0.5rem;
+}
+.nav-tabs {
+  @include justify-content(start);
+  .nav-link {
+    border-top: 0;
+  }
+}
+

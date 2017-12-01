@@ -11,19 +11,28 @@
         <!-- Place favicon.ico in the root directory -->
     </head>
     <body>
-      <header>
-        <nav class="navbar navbar-fixed-top">
-          <a class="navbar-brand" href="/">
-            <img src="assets/img/logotype-datapol.png" class="img-fluid" alt="Logotype datapol" width="30" height="30">
-          </a>
-        </nav>
-      </header>
       <main role="main" class="container-fluid max-height-base no-overflow">
         <div class="row max-height">
-          <aside class="col-sm-4 col-md-3 max-height">
-            <div class="card max-height">
-              <h4 class="card-header">Options</h4>
-              <div class="card-body scrollable">
+          <aside class="col-sm-4 col-md-3 max-height no-padding-left">
+
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+              <li class="nav-item">
+                <!-- Add and remove class active-->
+                <a class="nav-link" id="candidats-tab" data-toggle="tab" href="#candidats" role="tab" aria-controls="candidats" aria-selected="true">Candidats</a>
+              </li>
+              <li class="nav-item">
+                <!-- Add and remove class active-->
+                <a class="nav-link" id="queries-tab" data-toggle="tab" href="#queries" role="tab" aria-controls="queries" aria-selected="false">Queries</a>
+              </li>
+              <li class="nav-item">
+                <!-- Add and remove class active-->
+                <a class="nav-link active" id="events-tab" data-toggle="tab" href="#events" role="tab" aria-controls="events" aria-selected="false">Événements</a>
+              </li>
+            </ul>
+
+            <div class="tab-content max-height-tab" id="myTabContent">
+              <!-- Add and remove class active show-->
+              <div class="tab-pane fade scrollable" id="candidats" role="tabpanel" aria-labelledby="candidats-tab">
                 <form>
                   <div class="form-check">
                     <label class="form-check-label">
@@ -140,7 +149,7 @@
                     <label for="news" class="form-check-label">
                       <input id="news" class="form-check-input" name="option" type="checkbox" value="news">
                       <span class="badge badge-legend">News
-                        <small><svg xmlns="http://www.w3.org/2000/svg" width="32" height="1.659" viewBox="0 0 32 1.659"><path fill="#FFF" d="M0 .83h32"/><path d="M0 0h6v1.66H0zM12.667 0h6.667v1.66h-6.667zM26 0h6v1.66h-6z"/></svg></small>
+                        <small><svg xmlns="http://www.w3.org/2000/svg" width="32" height="1.659" viewBox="0 0 32 1.659"><path d="M0 0h6v1.66H0zM12.667 0h6.667v1.66h-6.667zM26 0h6v1.66h-6z"/></svg></small>
                       </span>
                     </label>
                   </div>
@@ -148,7 +157,7 @@
                     <label for="web" class="form-check-label">
                       <input id="web" class="form-check-input" name="option" type="checkbox" value="web">
                       <span class="badge badge-legend">Web
-                        <small><svg xmlns="http://www.w3.org/2000/svg" width="32" height="1.659" viewBox="0 0 32 1.659"><path fill="#FFF" d="M0 .83h32"/><path d="M0 0h32v1.66H0z"/></svg></small>
+                        <small><svg xmlns="http://www.w3.org/2000/svg" width="32" height="1.659" viewBox="0 0 32 1.659"><path d="M0 0h32v1.66H0z"/></svg></small>
                       </span>
                     </label>
                   </div>
@@ -157,6 +166,33 @@
                     <label for="adjust" class="form-check-label">
                       <input id="adjust" class="form-check-input" name="option" type="checkbox" value="adjust">
                       <span class="badge">Ajuster chaque candidat</span>
+                    </label>
+                  </div>
+                </form>
+              </div>
+              <!-- Add and remove class active show-->
+              <div class="tab-pane fade scrollable" id="queries" role="tabpanel" aria-labelledby="queries-tab">
+                <form>
+                  <div class="form-group">
+                    <label class="col-form-label sr-only" for="searchQueries">Effectuer une recherche</label>
+                    <input type="search" class="form-control" id="searchQueries" placeholder="rechercher">
+                  </div>
+                  <p>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte.<p>
+                </form>
+              </div>
+              <!-- Add and remove class active show-->
+              <div class="tab-pane fade active show" id="events" role="tabpanel" aria-labelledby="events-tab">
+                <form>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                      <span><span class="date">12/01/2017</span>Option one is this and that&mdash;be sure to include why it's great</span>
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                      <span><span class="date">12/01/2017</span>Option two can be something else and selecting it will deselect option one</span>
                     </label>
                   </div>
                 </form>

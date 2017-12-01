@@ -1,0 +1,17 @@
+//
+// Components Organism Tab
+// —————————————————————————————————————
+.max-height-tab {
+    height: calc(100% - 42px);
+}
+.tab-content {
+  border-right: 1px solid #ddd;
+}
+.tab-pane {
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+
+  form {
+    padding: 1rem 0;
+  }
+}

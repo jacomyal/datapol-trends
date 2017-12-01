@@ -2,7 +2,9 @@
 // Components Molecules Form Check Label
 // —————————————————————————————————————
 .form-check {
-
+  &-input {
+        margin-top: 0.35rem;
+  }
   // Form Check Label
   // —————————————————————————————————————
   &-label {
@@ -31,6 +33,17 @@
 
         opacity: 1;
       }
+    }
+    input[type=radio] {
+      + span {
+        font-size: 0.9rem;
+      }
+    }
+
+    .date {
+      display: block;
+      font-weight: 700;
+      padding-top: 0.3em;
     }
 
     // Badge
