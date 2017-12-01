@@ -1,0 +1,10 @@
+//
+// MIXIN HARDWARE ACCELERATION
+// --------------------------------------------------
+@mixin hardware($backface: true, $perspective: 1000) {
+  @if $backface {
+    backface-visibility: hidden;
+  }
+
+  perspective: $perspective;
+}

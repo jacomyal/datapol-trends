@@ -1,0 +1,10 @@
+//
+// Mixin Hover, Focus...
+// --------------------------------------------------
+@mixin hover-focus-active {
+  &:hover,
+  &:focus,
+  &:active {
+    @content;
+  }
+}

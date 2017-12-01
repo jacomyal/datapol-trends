@@ -1,0 +1,10 @@
+//
+// Mixin Ellipsis
+// --------------------------------------------------
+@mixin ellipsis($max-width) {
+  display: block;
+  max-width: $max-width;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

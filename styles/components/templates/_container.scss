@@ -1,0 +1,19 @@
+//
+// Components Template Container
+// —————————————————————————————————————
+.container {
+
+  // Content
+  // —————————————————————————————————————
+  &-content {
+    @include flexbox;
+
+    @include flex-direction(column);
+  }
+
+  // Viz
+  // —————————————————————————————————————
+  &-viz {
+    @include flex-grow(1);
+  }
+}

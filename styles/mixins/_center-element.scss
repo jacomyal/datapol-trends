@@ -1,0 +1,46 @@
+//
+// MIXIN Center an element vertically
+// ----------------------------
+@mixin vert-center {
+  position: relative;
+  top: 50%;
+
+  @include translate(0, -50%);
+}
+
+@mixin vert-center-absolute {
+  position: absolute;
+  top: 50%;
+
+  @include translate(0, -50%);
+}
+
+@mixin hory-center {
+  position: relative;
+  left: 50%;
+
+  @include translate(50%, 0);
+}
+
+@mixin hory-center-absolute {
+  position: absolute;
+  left: 50%;
+
+  @include translate(50%, 0);
+}
+
+@mixin both-center {
+  position: relative;
+  top: 50%;
+  left: 50%;
+
+  @include translate(-50%, -50%);
+}
+
+@mixin both-center-absolute {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  @include translate(-50%, -50%);
+}

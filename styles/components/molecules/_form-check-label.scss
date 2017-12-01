@@ -1,0 +1,36 @@
+//
+// Components Molecules Form Check Label
+// —————————————————————————————————————
+.form-check-label {
+  &:hover {
+    cursor: pointer;
+
+    img {
+      @include grayscale(0%);
+
+      opacity: 1;
+    }
+  }
+
+  img {
+    @include grayscale(100%);
+
+    @include transition(opacity 0.25s ease-in-out);
+
+    border-radius: 50%;
+    opacity: 0.1;
+  }
+
+  input[type=checkbox]:checked {
+    + img {
+      @include grayscale(0%);
+
+      opacity: 1;
+    }
+  }
+
+  .badge {
+    font-weight: normal;
+    border-radius: 0;
+  }
+}

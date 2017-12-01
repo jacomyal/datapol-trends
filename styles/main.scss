@@ -1,0 +1,15 @@
+//
+// Datapol Main
+// —————————————————————————————————————
+
+@import "bootstrap";
+
+@import "mixins";
+
+@import "components";
+// Generic
+// —————————————————————————————————————
+hr {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}

@@ -8,7 +8,12 @@ export default branch(
   class Curve extends Component {
     render() {
       return (
-        <div>The curve will be here...</div>
+        <div className="container-content col-sm-9">
+          <h1>Titre</h1>
+          <div className="container-viz">
+            viz
+          </div>
+        </div>
       );
     }
   }
